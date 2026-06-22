@@ -24,7 +24,7 @@ public class TreeScanner {
         BranchBlock branchBlock = TreeHelper.getBranch(state);
         if (branchBlock == null) return new TreeData("none", 0, 0, "none");
 
-        // 1. Trouver la racine et son type de bloc
+        // Trouver la racine et son type de bloc
         BlockPos rootPos = TreeHelper.findRootNode(level, pos);
         BlockState rootState = level.getBlockState(rootPos);
         String rootyBlockName = "unknown";
@@ -34,16 +34,16 @@ public class TreeScanner {
             if (res != null) {
                 rootyBlockName = res.toString();
             }
-        } // 🌟 L'accolade en trop a été supprimée ici
+        }
 
-        // 2. Trouver l'essence
+        // Trouver l'essence
         Species species = TreeHelper.getBestGuessSpecies(level, pos);
         String speciesName = (species != null && species.getRegistryName() != null)
                 ? species.getRegistryName().toString() : "unknown";
 
         TreeData data = new TreeData(speciesName, rootPos.getX(), rootPos.getZ(), rootyBlockName);
 
-        // 3. Collecteur passif
+        // Collecteur passif
         NodeInspector branchCollector = new NodeInspector() {
             @Override
             public boolean run(BlockState blockState, LevelAccessor world, BlockPos blockPos, Direction fromDir) {
@@ -70,7 +70,7 @@ public class TreeScanner {
             }
         };
 
-        // 4. Lancement de l'analyse globale
+        // Lancement de l'analyse globale
         MapSignal signal = new MapSignal(branchCollector);
         TreeHelper.startAnalysisFromRoot(level, rootPos, signal);
 
