@@ -1,0 +1,13 @@
+{
+    "forestManagement":{
+        "Palissonais":{
+            "name_id":"Palissonais",
+            "id": "1",
+            "world_name": "Forêt de Palissonais",
+            "normalized_world_name": "foret_de_palissonais",
+            "Surface": 483.3634,
+            "owner": "Mutuelle Minecraft&moi"
+            
+        }
+    }
+}

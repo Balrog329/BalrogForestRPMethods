@@ -1,0 +1,123 @@
+{
+    "treesdatabase": {
+        "path": "kubejs/data/",
+        "key_name": "treesdatabase"
+    },
+
+    "lotdatabase": {
+        "path":"kubejs/data/",
+        "key_name" : "lotdatabase"
+    },
+    
+    "speciesdata": {
+        "path": "kubejs/config/",
+        "key_name": "speciesdata"
+    },
+
+    "treeMark": {
+    "abandon": {
+        "mark_name": "abandon",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "s_a_b:brassgg[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "s_a_b:brassgg[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    },
+
+    "hammering": {
+        "mark_name": "hammered",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "s_a_b:brassminus[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "s_a_b:brassminus[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "s_a_b:brassminus[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "s_a_b:brassminus[facing=west]"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "s_a_b:brassdot[facing=west]"
+        }
+        }
+    },
+
+
+    "futur": {
+        "mark_name": "futur",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "s_a_b:minus[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "s_a_b:minus[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "s_a_b:minus[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "s_a_b:minus[facing=west]"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    },
+
+    "counted": {
+        "mark_name": "counted",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "minecraft:air"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "minecraft:air"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "s_a_b:brassdot[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "species.dynamictrees.oak":{
+        "min_log_radius": 5,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    },
+
+    "species.dynamictrees.acacia":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 3,
+        "hammerable": false
+    },
+
+    "species.dynamictrees.birch":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 3,
+        "hammerable": false
+    },
+
+    "species.dynamictrees.dark_oak":{
+        "min_log_radius": 4,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": false
+    },
+
+    "species.dynamictrees.spruce":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    },
+
+    "species.dtterralith.moonlight":{
+        "min_log_radius": 4,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    },
+
+    "species.dtbwg.fir":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    },
+
+    "species.dtbop.fir":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    },
+
+    "species.dtbop.redwood":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true
+    }
+
+
+
+}
+
