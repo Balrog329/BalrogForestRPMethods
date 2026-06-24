@@ -18,11 +18,11 @@ public class TreeScanner {
 
     public static TreeData scanTree(BlockPos pos) {
         ServerLevel level = ServerContext.getServerLevel();
-        if (level == null) return new TreeData("none", 0, 0, "none");
+        if (level == null) return new TreeData("none", 0, 0, 0, "none");
 
         BlockState state = level.getBlockState(pos);
         BranchBlock branchBlock = TreeHelper.getBranch(state);
-        if (branchBlock == null) return new TreeData("none", 0, 0, "none");
+        if (branchBlock == null) return new TreeData("none", 0, 0, 0, "none");
 
         // Trouver la racine et son type de bloc
         BlockPos rootPos = TreeHelper.findRootNode(level, pos);
@@ -41,7 +41,7 @@ public class TreeScanner {
         String speciesName = (species != null && species.getRegistryName() != null)
                 ? species.getRegistryName().toString() : "unknown";
 
-        TreeData data = new TreeData(speciesName, rootPos.getX(), rootPos.getZ(), rootyBlockName);
+        TreeData data = new TreeData(speciesName, rootPos.getX(), rootPos.getY(), rootPos.getZ(), rootyBlockName);
 
         // Collecteur passif
         NodeInspector branchCollector = new NodeInspector() {
@@ -60,6 +60,8 @@ public class TreeScanner {
                             radius,
                             officialSegmentVolume
                     ));
+                    
+                    data.volume_total += officialSegmentVolume;
                 }
                 return false;
             }

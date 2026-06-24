@@ -50,90 +50,80 @@ BlockEvents.rightClicked(event => {
         getMcDimension(player) !== "minecraft:overworld") {return}
 
     let itemId = getItemId(event.item)
-    console.info(itemId)
-    let speciesId = getBlockId(block)
 
-    if (!speciesId.includes("branch")) {return}
+    let context_class = getContextClass(player)
 
-    let species = getSpecies(speciesId)
+    let tree_data = callTreeScanner(BlockPos(block.x, block.y, block.z))
+
+    if (tree_data.tree_species == "none") {return}
+
+    const pos = treePosMetadata(player, tree_data)
+    if (!pos) {return}
+
+    let forest_name = pos.normalized_world_name
+    let trees_database = loadTreeData(player, `${forest_name}TreeDatabase`)
+
+
+    // Mesure
+    if (itemId == "immersiveengineering:hoe_steel"){
+        let counted_mark_config = loadConfigData(player, "globalforestconfig").treeMark.counted
+
+        let id = measureTree(player, tree_data, pos, trees_database)
+        if (!id) {return}
+
+        findPhysicalTreeMark(player, trees_database.trees[id], counted_mark_config)
+    }
+
 
     // Marteau
     if (itemId == "immersiveengineering:hammer") {
-        const pos = treePosMetadata(player, block);
-        if (!pos) return;
 
-        let mark_hammer_config =
-            loadConfigData(player, "globalforestconfig").treeMark.hammering;
+        let mark_hammer_config = loadConfigData(player, "globalforestconfig").treeMark.hammering;
 
         let lot_data = getLot(player, pos);
 
-        let tree_id = measureTree(player, block, species, pos)
-        if (!tree_id) {return}
-
-        let tree_data = loadTreeData(player, `${pos.normalized_world_name}_trees_database`).trees[tree_id]
-
-        if (!tree_data) {return}
-        if (sneaking) {
-            reserveTree(player, block, pos, lot_data)
-        } else {
-            hammaringTree(block, player, tree_id, tree_data, pos, mark_hammer_config, lot_data)
-        }
-
-        
-
-        return
-    }
-
-    // Mesure
-    if (itemId == "immersiveengineering:hoe_steel") {
-        const pos = treePosMetadata(player, block)
-        if (!pos) return;
-
-        let counted_mark_config = loadConfigData(player, "globalforestconfig").treeMark.counted
-
-        measureTree(player, block, species, pos)
-        findTreePosMark(player, block, counted_mark_config)
-        return
-    }
-
-    // Marquage abandon
-    if (itemId == "immersiveengineering:dust_copper") {
-        const pos = treePosMetadata(player, block)
-        if (!pos) return
-
-        let abandon_mark_config = loadConfigData(player, "globalforestconfig").treeMark.abandon;
+        let id = measureTree(player, tree_data, pos, trees_database)
+        if (!id) {return}
 
         if (sneaking) {
-            reserveMarkedTree(player, block, pos)
+            reserveHammeringTree(player, tree_data, pos, lot_data)
         } else {
-            markTree(player, block, species, pos, abandon_mark_config)
+            hammaringTree(player, id, trees_database.trees[id], mark_hammer_config, lot_data)
         }
 
         return
     }
+
 
     // Marquage avenir
+    let mark_config = null
+
     if (itemId == "immersiveengineering:dust_aluminum") {
-        const pos = treePosMetadata(player, block)
-        if (!pos) return;
+        mark_config = loadConfigData(player, "globalforestconfig").treeMark.futur
+    }
+    // Marquage abandon
+    if (itemId == "immersiveengineering:dust_copper") {
+        mark_config = loadConfigData(player, "globalforestconfig").treeMark.abandon
+    }
+    if (!mark_config) {return}
 
-        let futur_mark_config = loadConfigData(player, "globalforestconfig").treeMark.futur
+    let id = measureTree(player, tree_data, pos, trees_database)
 
-        if (sneaking) {
-            reserveMarkedTree(player, block, pos)
-        } else {
-            markTree(player, block, species, pos, futur_mark_config)
-        }
-
+    if (sneaking) {
+        reserveMarkedTree(player, id, trees_database.trees[id])
+        return
+    } else {
+        markTree(player, id, trees_database.trees[id], mark_config)
         return
     }
 
     // divers test
-    if (itemId == "minecraft:compass"){
+    if (itemId == "minecraft:compass") {
 
+    
         let context_class = getContextClass(player)
 
-        let tree_data = callTreeScanner(block)
+        let tree_data = callTreeScanner(BlockPos(block.x, block.y, block.z))
 
         if (tree_data.tree_species !== "none") {
             let branch_list = tree_data.branch
@@ -143,6 +133,7 @@ BlockEvents.rightClicked(event => {
             console.info(`[DONNÉES ARBRE] Essence : ${tree_data.tree_species}`)
             console.info(`[DONNÉES ARBRE] Racine  : X=${tree_data.x}, Z=${tree_data.z}`)
             console.info(`[DONNÉES ARBRE] racine: ${tree_data.rooty_block}`)
+            console.info(`[DONNÉES ARBRE] volume: ${tree_data.volume_total}`)
             console.info(`[DONNÉES ARBRE] Nombre de segments : ${branch_list.size()}`)
             console.info("--------------------------------------------------")
             console.info(" [Liste des Branches]");

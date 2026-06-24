@@ -1,35 +1,44 @@
-function measureTree(player, block, species, pos) {
 
-    let forest_name = pos.normalized_world_name
-    let tree_config_data = loadConfigData(player, "speciesdata")[species]
 
-    let radius = getTreeRadius(block)
-    if (radius < tree_config_data.min_count_radius) {return}
+function measureTree(player, tree_data, pos, tree_database) {
+    let tree_config_data = loadConfigData(player, "speciesdata")[tree_data.tree_species]
 
-    let diameter = radius *2
+    let id = `${getTreePositionStr(tree_data)}_${tree_data.volume_total}`
 
-    let tree_pos = getTreePositionRaw(block)
-
-    let height = getScoreboardValue(player, "height")
-
-    if (height == 0) {
-        height = getTreeLogHeight(player, block, tree_pos, diameter, tree_config_data)
-    }
-
-    resetScoreboard(player, "height")
-
+    let tree_logs_segments = getTreeLogSegments(tree_data, tree_config_data)
+  
+    let height = tree_logs_segments.length
+    if (height == 0) {return}
+    
     let quality = getScoreboardValue(player, "qlt")
-
     if (quality == 0) {
         quality = tree_config_data.default_quality
     }
 
+    let radius = getTreeBaseRadius(tree_data);
+    let log_volume = getLogVolume(tree_logs_segments);
+    let energy_volume = getEnergyVolume(tree_data.branch, tree_logs_segments, tree_config_data.min_count_radius)
+
+    tree_database.trees[id] = {
+        species: tree_data.tree_species,
+        radius: radius,
+        height: height,
+        quality: quality,
+        vol1: log_volume,
+        vol2: energy_volume,
+        forest: pos.normalized_world_name,
+        parcel: pos.parcel,
+        owner: pos.owner,
+        posx: tree_data.x,
+        posy: tree_data.y,
+        posz: tree_data.z
+    }
+
     resetScoreboard(player, "qlt")
 
-    messageChat(player, `${species} ; ${diameter} x ${height} qlt : ${quality}`)
+    messageChat(player, `${tree_data.tree_species} ; ${radius} x ${height} qlt : ${quality}, vol1 : ${log_volume} m³, vol2 : ${energy_volume} m³`)
 
-    let id = addTree(player, block, `${forest_name}_trees_database`, species, diameter, height, quality, tree_pos, pos)
-    
+    saveTreeData(player, `${pos.normalized_world_name}TreeDatabase`, tree_database)
+
     return id
-
 }

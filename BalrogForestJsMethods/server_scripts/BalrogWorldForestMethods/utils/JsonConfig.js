@@ -41,12 +41,12 @@ function loadlotData(player, forest_name, json_name) {
     }
 }
 
-function loadmarkedData(player, json_name) {
+function loadmarkedData(player, forest_name, json_name) {
 
     const file = getTreeFile(player, json_name)
 
     return JsonIO.read(file) || {
-        forest: String(getMcWorld(player)),
+        forest: forest_name,
         marked: {
         trees: {}
         }

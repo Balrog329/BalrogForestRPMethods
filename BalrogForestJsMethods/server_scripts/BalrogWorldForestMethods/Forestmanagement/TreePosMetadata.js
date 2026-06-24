@@ -1,8 +1,8 @@
 
 // renvoie les métadonnées temporaire de la forêt pour une position définie
 
-function treePosMetadata(player, block) {
-    const parcelles_raw = getPolygonNames(player, block.x, block.z);
+function treePosMetadata(player, tree_data) {
+    const parcelles_raw = getPolygonNames(player, tree_data.x, tree_data.z);
 
     if (!parcelles_raw || parcelles_raw.length === 0) {
         player.tell("Tu es dans la nature sauvage.");
@@ -44,7 +44,7 @@ function treePosMetadata(player, block) {
     }
 
     if (!forest_meta) {
-        player.tell("Forêt introuvable");
+        messageChat(player, "Forêt introuvable");
         return null;
     }
 

@@ -1,0 +1,25 @@
+{
+	"forest": "foret_de_palissonais",
+	"marked": {
+		"trees": {
+			"1369_-42_1.03125": {
+				"mark_name": "abandon"
+			},
+			"1369_-47_1.46875": {
+				"mark_name": "abandon"
+			},
+			"1383_-66_6.515625": {
+				"mark_name": "futur"
+			},
+			"1367_-229_2.8125": {
+				"mark_name": "abandon"
+			},
+			"1205_-391_3.953125": {
+				"mark_name": "abandon"
+			},
+			"1170_-411_7.09375": {
+				"mark_name": "abandon"
+			}
+		}
+	}
+}
