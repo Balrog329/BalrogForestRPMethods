@@ -1,0 +1,19 @@
+{
+	"forest": "bois_du_val_varigot",
+	"years": {
+		"2012": {
+			"exploit_P2_9.515625": {
+				"type": "exploitation",
+				"desc": "Parcelle 2,volume 9.52 m³, valeur 120 Z"
+			},
+			"2_2012_VV_P1_5_CS":{
+				"type": "Lot_BP",
+				"desc" : "Lot n°2_2012_VV_P1_5_CS, vendu à SCIERIE_YVANDUBOIS pour 198951"
+			},
+			"2_2012_VV_P2_CR": {
+				"type": "Lot_BP",
+				"desc": "Lot n°2_2012_VV_P2_CR, vendu à COFOR_CENTRE pour 241876"
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"forest": "vidaillat",
+	"book": {
+		"3_2010_rangement_remanents_andains_P10": {
+			"year": 2010,
+			"type": "travaux",
+			"parcel": 10,
+			"desc": "Parcelle 10, Les travaux rangement_remanents_andains ont été accepté pour 4167.990000000001 Z."
+		},
+		"3_2010_rangement_remanents_andains_P13": {
+			"year": 2010,
+			"type": "travaux",
+			"parcel": 13,
+			"desc": "Parcelle 13, Les travaux rangement_remanents_andains ont été accepté pour 3959.8199999999993 Z."
+		}
+	}
+}

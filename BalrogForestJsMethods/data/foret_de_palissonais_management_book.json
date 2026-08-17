@@ -1,0 +1,35 @@
+{
+	"forest": "foret_de_palissonais",
+	"book": {
+		"2014489.171875": {
+			"year": 2014,
+			"type": "exploit_up",
+			"parcel": 4,
+			"desc": "Exploitation en UP de 89.171875 dans la parcelle 4 terminée"
+		},
+		"20145133.484375": {
+			"year": 2014,
+			"type": "exploit_up",
+			"parcel": 5,
+			"desc": "Exploitation en UP de 133.484375 dans la parcelle 5 terminée"
+		},
+		"20146136.546875": {
+			"year": 2014,
+			"type": "exploit_up",
+			"parcel": 6,
+			"desc": "Exploitation en UP de 136.546875 dans la parcelle 6 terminée"
+		},
+		"20143861.21875": {
+			"year": 2014,
+			"type": "exploit_up",
+			"parcel": 3,
+			"desc": "Exploitation en UP de 861.21875 dans la parcelle 3 terminée"
+		},
+		"20142437.546875": {
+			"year": 2014,
+			"type": "exploit_up",
+			"parcel": 2,
+			"desc": "Exploitation en UP de 437.546875 dans la parcelle 2 terminée"
+		}
+	}
+}

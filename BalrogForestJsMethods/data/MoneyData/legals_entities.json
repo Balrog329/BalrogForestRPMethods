@@ -1,0 +1,140 @@
+{
+	"BANK": {
+		"first_name": "the bank",
+		"abreviation": "B",
+		"first_name_id": "bank",
+		"administrator": "None",
+		"activ": "bank",
+		"holding": "BANK",
+		"properties": {},
+		"monetary_context": {
+			"balance": 9.999999997382795E18,
+			"loans": "NULL"
+		}
+	},
+	"BERNIS_ASSURANCES": {
+		"first_name": "Fond Forestier des assurances BERNIS",
+		"abreviation": "FFAB",
+		"first_name_id": "ff_bernis_assurances",
+		"administrator": "balrog329",
+		"activ": "agri",
+		"holding": "BERNIS_ASSURANCES",
+		"properties": {
+			"1": "Palissonais"
+		},
+		"monetary_context": {
+			"balance": 799181.85,
+			"loans": "NULL"
+		}
+	},
+	"CABINET_BALROG": {
+		"first_name": "Cabinet de Balrog gestion forestiere",
+		"first_name_id": "cabinet_balrog",
+		"abreviation": "CBGF",
+		"administrator": "balrog329",
+		"activ": "manager",
+		"holding": "self",
+		"properties": {},
+		"monetary_context": {
+			"balance": 45509,
+			"loans": "NULL"
+		}
+	},
+	"GFA_MICHEL": {
+		"first_name": "Groupement foncier agricole Michel",
+		"first_name_id": "gfa_michel",
+		"abreviation": "gfam",
+		"administrator": "none",
+		"activ": "agri",
+		"holding": "self",
+		"properties": {},
+		"monetary_context": {
+			"balance": 0,
+			"loans": "NULL"
+		}
+	},
+	"INDIV_DE_TURQUOIN": {
+		"first_name": "Indivision de Turquoin",
+		"first_name_id": "indiv_de_turquoin",
+		"abreviation": "IDV_DTRQ",
+		"administrator": "balrog329",
+		"activ": "agri",
+		"holding": "self",
+		"properties": {
+			"3": "vidaillat"
+		},
+		"monetary_context": {
+			"balance": 131956.2,
+			"loans": "NULL"
+		}
+	},
+	"SCIERIE_YVANDUBOIS": {
+		"first_name": "Scierie Yvan Du Bois",
+		"abreviation": "SYDV",
+		"first_name_id": "scierie_yvan_du_bois",
+		"administrator": "BOT",
+		"activ": "wood_buyer",
+		"holding": "self",
+		"properties": {},
+		"monetary_context": {
+			"balance": 295896.5,
+			"loans": "NULL"
+		}
+	},
+	"COFOR_CENTRE": {
+		"first_name": "Cofor Centre",
+		"abreviation": "COFC",
+		"first_name_id": "cofor_centre",
+		"administrator": "BOT",
+		"activ": "wood_buyer",
+		"holding": "cofor",
+		"properties": {},
+		"monetary_context": {
+			"balance": 850829,
+			"loans": "NULL"
+		}
+	},
+	"BEXTBOIS": {
+		"first_name": "Bextbois",
+		"abreviation": "BXTB",
+		"first_name_id": "bextbois",
+		"administrator": "BOT",
+		"activ": "wood_buyer",
+		"holding": "bextbois",
+		"properties": {},
+		"monetary_context": {
+			"balance": 1732704.5,
+			"loans": "NULL"
+		}
+	},
+	"SAS_SANGER": {
+		"first_name": "SAS Sanger",
+		"first_name_id": "sas_sanger",
+		"abreviation": "sas_sanger",
+		"administrator": "balrog329",
+		"activ": "agri",
+		"holding": "self",
+		"properties": {
+			"4": "pierre_percee"
+		},
+		"monetary_context": {
+			"balance": 10000,
+			"loans": "NULL"
+		}
+	},
+	"GAN_ALMA_GROUPE": {
+		"first_name": "GAN-ALMA GROUPE",
+		"first_name_id": "gan_alma_groupe",
+		"abreviation": "gag",
+		"administrator": "balrog329",
+		"activ": "agri",
+		"holding": "self",
+		"properties": {
+			"5": "les_farges"
+		},
+		"monetary_context": {
+			"balance": 10000,
+			"loans": "NULL"
+		}
+	}
+}

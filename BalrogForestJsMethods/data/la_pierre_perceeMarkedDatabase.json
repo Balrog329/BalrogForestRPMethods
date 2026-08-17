@@ -1,0 +1,208 @@
+{
+	"forest": "la_pierre_percee",
+	"marked": {
+		"trees": {
+			"-470_280_2.5625": {
+				"mark_name": "abandon"
+			},
+			"-466_277_2.390625": {
+				"mark_name": "abandon"
+			},
+			"-447_274_4.015625": {
+				"mark_name": "abandon"
+			},
+			"-476_263_3.171875": {
+				"mark_name": "abandon"
+			},
+			"-482_266_0.609375": {
+				"mark_name": "abandon"
+			},
+			"-483_267_3.921875": {
+				"mark_name": "abandon"
+			},
+			"150_-99_1.078125": {
+				"mark_name": "abandon"
+			},
+			"150_-97_2.671875": {
+				"mark_name": "abandon"
+			},
+			"150_-103_2.171875": {
+				"mark_name": "abandon"
+			},
+			"150_-107_1.453125": {
+				"mark_name": "abandon"
+			},
+			"150_-111_2.796875": {
+				"mark_name": "abandon"
+			},
+			"150_-117_4.125": {
+				"mark_name": "abandon"
+			},
+			"150_-121_6.140625": {
+				"mark_name": "abandon"
+			},
+			"150_-127_2.03125": {
+				"mark_name": "abandon"
+			},
+			"150_-129_1.34375": {
+				"mark_name": "abandon"
+			},
+			"150_-133_2.5625": {
+				"mark_name": "abandon"
+			},
+			"150_-137_1.5": {
+				"mark_name": "abandon"
+			},
+			"150_-141_3.1875": {
+				"mark_name": "abandon"
+			},
+			"150_-145_2.796875": {
+				"mark_name": "abandon"
+			},
+			"150_-151_3.796875": {
+				"mark_name": "abandon"
+			},
+			"150_-155_0.640625": {
+				"mark_name": "abandon"
+			},
+			"150_-157_0.75": {
+				"mark_name": "abandon"
+			},
+			"150_-159_0.75": {
+				"mark_name": "abandon"
+			},
+			"150_-161_2.015625": {
+				"mark_name": "abandon"
+			},
+			"150_-165_2.53125": {
+				"mark_name": "abandon"
+			},
+			"135_-167_0.890625": {
+				"mark_name": "abandon"
+			},
+			"135_-165_2.8125": {
+				"mark_name": "abandon"
+			},
+			"135_-161_3.421875": {
+				"mark_name": "abandon"
+			},
+			"135_-159_0.953125": {
+				"mark_name": "abandon"
+			},
+			"135_-155_1.171875": {
+				"mark_name": "abandon"
+			},
+			"135_-153_2.421875": {
+				"mark_name": "abandon"
+			},
+			"135_-151_0.90625": {
+				"mark_name": "abandon"
+			},
+			"135_-149_1.90625": {
+				"mark_name": "abandon"
+			},
+			"135_-147_1.515625": {
+				"mark_name": "abandon"
+			},
+			"135_-143_1.84375": {
+				"mark_name": "abandon"
+			},
+			"135_-141_2": {
+				"mark_name": "abandon"
+			},
+			"135_-137_2.9375": {
+				"mark_name": "abandon"
+			},
+			"135_-135_0.84375": {
+				"mark_name": "abandon"
+			},
+			"135_-133_1.359375": {
+				"mark_name": "abandon"
+			},
+			"135_-131_1.265625": {
+				"mark_name": "abandon"
+			},
+			"135_-129_2.59375": {
+				"mark_name": "abandon"
+			},
+			"135_-123_1.84375": {
+				"mark_name": "abandon"
+			},
+			"135_-117_3.6875": {
+				"mark_name": "abandon"
+			},
+			"135_-111_0.8125": {
+				"mark_name": "abandon"
+			},
+			"135_-105_2.28125": {
+				"mark_name": "abandon"
+			},
+			"135_-99_0.59375": {
+				"mark_name": "abandon"
+			},
+			"135_-97_2.71875": {
+				"mark_name": "abandon"
+			},
+			"135_-91_2.328125": {
+				"mark_name": "abandon"
+			},
+			"135_-85_3.921875": {
+				"mark_name": "abandon"
+			},
+			"120_-115_2.578125": {
+				"mark_name": "abandon"
+			},
+			"120_-119_1.265625": {
+				"mark_name": "abandon"
+			},
+			"120_-121_1.296875": {
+				"mark_name": "abandon"
+			},
+			"120_-125_1.84375": {
+				"mark_name": "abandon"
+			},
+			"120_-133_2.40625": {
+				"mark_name": "abandon"
+			},
+			"120_-137_1.375": {
+				"mark_name": "abandon"
+			},
+			"120_-139_1.53125": {
+				"mark_name": "abandon"
+			},
+			"120_-145_1.609375": {
+				"mark_name": "abandon"
+			},
+			"120_-147_2.109375": {
+				"mark_name": "abandon"
+			},
+			"120_-151_1.34375": {
+				"mark_name": "abandon"
+			},
+			"120_-155_2.796875": {
+				"mark_name": "abandon"
+			},
+			"120_-159_2.28125": {
+				"mark_name": "abandon"
+			},
+			"60_-73_1.9375": {
+				"mark_name": "abandon"
+			},
+			"60_-77_0.640625": {
+				"mark_name": "abandon"
+			},
+			"60_-79_4.046875": {
+				"mark_name": "abandon"
+			},
+			"60_-81_0.78125": {
+				"mark_name": "abandon"
+			},
+			"60_-85_3.765625": {
+				"mark_name": "abandon"
+			},
+			"60_-91_3.171875": {
+				"mark_name": "abandon"
+			}
+		}
+	}
+}

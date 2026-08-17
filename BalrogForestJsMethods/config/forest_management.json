@@ -1,13 +1,82 @@
 {
-    "forestManagement":{
+    "forestManagement": {
         "Palissonais":{
             "name_id":"Palissonais",
             "id": "1",
             "world_name": "Forêt de Palissonais",
             "normalized_world_name": "foret_de_palissonais",
+            "world_dir": "PALISSONAIS",
+            "Surface": 505.2153,
+            "owner": "BERNIS_ASSURANCES",
+            "owner_type": "legal_entity",
+            "referent_manager": "balrog329",
+            "current_year": 2015,
+            "start_current_mdoc": 2012,
+            "end_current_mdoc": 2026,
+            "offline_time_coef": 0.1425555
+
+        },
+
+        "val_varigot":{
+            "name_id":"le Val Varigot",
+            "id": "2",
+            "world_name": "Bois du Val Varigot",
+            "normalized_world_name": "bois_du_val_varigot",
             "Surface": 483.3634,
-            "owner": "Mutuelle Minecraft&moi"
-            
+            "owner": "GFA_MICHEL",
+            "owner_type": "legal_entity",
+            "referent_manager": "balrog329",
+            "current_year": 2012,
+            "start_current_mdoc": 2005,
+            "end_current_mdoc": 2015,
+            "offline_time_coef": 1
+
+        },
+
+        "vidaillat": {
+            "name_id":"Vidaillat",
+            "id": "3",
+            "world_name": "Vidaillat",
+            "world_dir": "Vidaillat",
+            "normalized_world_name": "vidaillat",
+            "Surface": 136.7098,
+            "owner": "INDIV_DE_TURQUOIN",
+            "owner_type": "legal_entity",
+            "referent_manager": "balrog329",
+            "current_year": 2010,
+            "start_current_mdoc": 2002,
+            "end_current_mdoc": 2017,
+            "offline_time_coef": 0.1425555
+        },
+
+        "la_pierre_percee": {
+            "name_id":"la Pierre Percée",
+            "id": "4",
+            "world_name": "La Pierre Percée",
+            "normalized_world_name": "la_pierre_percee",
+            "Surface": 102.1496,
+            "owner": "SAS_SANGER",
+            "owner_type": "legal_entity",
+            "referent_manager": "balrog329",
+            "current_year": 2025,
+            "start_current_mdoc": 2011,
+            "end_current_mdoc": 2026,
+            "offline_time_coef": 1
+        },
+
+        "les_farges": {
+            "name_id":"Forêt des Farges",
+            "id": "5",
+            "world_name": "Forêt des Farges",
+            "normalized_world_name": "foret_des_farges",
+            "Surface": 139.1329,
+            "owner": "GAN_ALMA_GROUPE",
+            "owner_type": "legal_entity",
+            "referent_manager": "balrog329",
+            "current_year": 2022,
+            "start_current_mdoc": 2021,
+            "end_current_mdoc": 2040,
+            "offline_time_coef": 1
         }
     }
 }

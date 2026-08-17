@@ -1,0 +1,67 @@
+{
+	"forest": "bois_du_val_varigot",
+	"marked": {
+		"trees": {
+			"-1648_-1497_3.75": {
+				"mark_name": "abandon"
+			},
+			"-1653_-1501_4.59375": {
+				"mark_name": "abandon"
+			},
+			"-1655_-1498_1.515625": {
+				"mark_name": "abandon"
+			},
+			"-1656_-1494_4.015625": {
+				"mark_name": "abandon"
+			},
+			"-1636_-1495_2.90625": {
+				"mark_name": "abandon"
+			},
+			"-1631_-1496_3.296875": {
+				"mark_name": "abandon"
+			},
+			"-1621_-1506_3.1875": {
+				"mark_name": "abandon"
+			},
+			"-1623_-1513_2.734375": {
+				"mark_name": "abandon"
+			},
+			"-1628_-1527_3.796875": {
+				"mark_name": "abandon"
+			},
+			"-1624_-1527_6.28125": {
+				"mark_name": "abandon"
+			},
+			"-1626_-1529_3.171875": {
+				"mark_name": "abandon"
+			},
+			"-1623_-1532_3.5625": {
+				"mark_name": "abandon"
+			},
+			"-1638_-1528_4.59375": {
+				"mark_name": "abandon"
+			},
+			"-1630_-1548_4.609375": {
+				"mark_name": "abandon"
+			},
+			"-1628_-1548_1.734375": {
+				"mark_name": "abandon"
+			},
+			"-1623_-1546_2.390625": {
+				"mark_name": "abandon"
+			},
+			"-1283_-1540_2.640625": {
+				"mark_name": "abandon"
+			},
+			"-1148_-1518_5.171875": {
+				"mark_name": "abandon"
+			},
+			"-1150_-1529_3.953125": {
+				"mark_name": "abandon"
+			},
+			"-1157_-1530_4.328125": {
+				"mark_name": "abandon"
+			}
+		}
+	}
+}

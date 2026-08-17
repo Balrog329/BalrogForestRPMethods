@@ -1,0 +1,14 @@
+{
+	"forest": "la_pierre_percee",
+	"book": {
+		"test": {
+			"year": 2025,
+			"desc": "test"
+		},
+		"2026-8-5_16h59": {
+			"year": 2025,
+			"parcel": 5,
+			"desc": null
+		}
+	}
+}

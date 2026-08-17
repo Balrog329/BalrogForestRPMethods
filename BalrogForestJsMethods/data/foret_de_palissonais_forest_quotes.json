@@ -1,0 +1,19 @@
+{
+	"forest": "foret_de_palissonais",
+	"trees": {},
+	"quotes": {
+		"1_2014_broyage_plein_ou_bande_P102": {
+			"forest_name": "foret_de_palissonais",
+			"id": "1_2014_broyage_plein_ou_bande_P102",
+			"forest_id": 1,
+			"work_type": "broyage_plein_ou_bande",
+			"parcel": 102,
+			"surface": 2.5045,
+			"price": 6762.150000000001,
+			"year": 2014,
+			"owner": "BERNIS_ASSURANCES",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		}
+	}
+}

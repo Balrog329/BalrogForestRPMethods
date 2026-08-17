@@ -3,66 +3,204 @@
         "min_log_radius": 5,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_oak_log",
+        "log_block": "minecraft:oak_log",
+        "log_base_price": 96,
+        "energy_base_price": 10
     },
 
     "dynamictrees:acacia":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 3,
-        "hammerable": false
+        "hammerable": false,
+        "stump_block": "dynamictrees:acacia_branch",
+        "log_block": "minecraft:acacia_log",
+        "energy_base_price": 8
     },
 
     "dynamictrees:birch":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 3,
-        "hammerable": false
+        "hammerable": false,
+        "stump_block": "dynamictrees:birch_branch",
+        "log_block": "minecraft:acacia_log",
+        "energy_base_price": 5
     },
 
     "dynamictrees:dark_oak":{
         "min_log_radius": 4,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": false
+        "hammerable": true,
+        "stump_block": "dynamictrees:dark_oak_branch",
+        "log_block": "minecraft:dark_oak_log",
+        "log_base_price": 60,
+        "energy_base_price": 9
+    },
+
+    "dynamictrees:cherry":{
+        "min_log_radius": 5,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_cherry_log",
+        "log_block": "minecraft:cherry_log",
+        "log_base_price": 105,
+        "energy_base_price": 6
     },
 
     "dynamictrees:spruce":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_spruce_log",
+        "log_block": "minecraft:spruce_log",
+        "log_base_price": 38,
+        "energy_base_price": 12
+    },
+    "dynamictrees:mega_spruce":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_spruce_log",
+        "log_block": "minecraft:spruce_log",
+        "log_base_price": 38,
+        "energy_base_price": 12
     },
 
-    "dtterralith:moonlight":{
+    "dynamictrees:jungle":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_jungle_log",
+        "log_block": "minecraft:jungle_log",
+        "log_base_price": 52,
+        "energy_base_price": 14
+    },
+
+    "dtterralith:moonlight_spruce":{
         "min_log_radius": 4,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
+        "hammerable": true,
+        "stump_block": "minecraft:stripped_spruce_log",
+        "log_block": "minecraft:spruce_log",
+        "log_base_price": 38,
+        "energy_base_price": 11
+    },
+
+    "dtru:blackwood":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "biomeswevegone:stripped_fir_log",
+        "log_block": "biomeswevegone:fir_log",
+        "log_base_price": 65,
+        "energy_base_price": 14
     },
 
     "dtbwg:fir":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
+        "hammerable": true,
+        "stump_block": "biomeswevegone:stripped_fir_log",
+        "log_block": "biomeswevegone:fir_log",
+        "log_base_price": 65,
+        "energy_base_price": 14
+    },
+
+    "dtbop:mega_fir":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "biomesoplenty:stripped_fir_log",
+        "log_block": "biomesoplenty:fir_log",
+        "log_base_price": 38,
+        "energy_base_price": 12
     },
 
     "dtbop:fir":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
+        "hammerable": true,
+        "stump_block": "biomesoplenty:stripped_fir_log",
+        "log_block": "biomesoplenty:fir_log",
+        "log_base_price": 38,
+        "energy_base_price": 12
     },
 
     "dtbop:redwood":{
         "min_log_radius": 3,
         "min_count_radius": 3,
         "default_quality": 1,
-        "hammerable": true
-    }
+        "hammerable": true,
+        "stump_block": "biomesoplenty:stripped_redwood_log",
+        "log_block": "biomesoplenty:redwood_log",
+        "log_base_price": 68,
+        "energy_base_price": 14
+    },
+    
+    "dtbop:small_redwood":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "biomesoplenty:stripped_redwood_log",
+        "log_block": "biomesoplenty:redwood_log",
+        "log_base_price": 68,
+        "energy_base_price": 14
+    },
 
-
-
+    "dtbwg:pine":{
+        "min_log_radius": 4,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "biomeswevegone:stripped_pine_log",
+        "log_block": "biomeswevegone:pine_log",
+        "log_base_price": 31,
+        "energy_base_price": 11
+    },
+    "dtru:pine":{
+        "min_log_radius": 4,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "regions_unexplored:stripped_pine_log",
+        "log_block": "regions_unexplored:pine_log",
+        "log_base_price": 31,
+        "energy_base_price": 11
+    },
+    "dtru:larch":{
+        "min_log_radius": 3,
+        "min_count_radius": 3,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "regions_unexplored:stripped_larch_log",
+        "log_block": "regions_unexplored:larch_log",
+        "log_base_price": 42,
+        "energy_base_price": 13
+    },
+    "dtru:maple":{
+        "min_log_radius": 6,
+        "min_count_radius": 4,
+        "default_quality": 1,
+        "hammerable": true,
+        "stump_block": "regions_unexplored:stripped_maple_log",
+        "log_block": "regions_unexplored:maple_log",
+        "log_base_price": 72,
+        "energy_base_price": 11
+    },
+    "all": {}
 }
 

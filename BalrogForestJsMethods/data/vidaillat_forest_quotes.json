@@ -1,0 +1,32 @@
+{
+	"forest": "vidaillat",
+	"trees": {},
+	"quotes": {
+		"3_2010_rangement_remanents_andains_P10": {
+			"forest_name": "vidaillat",
+			"id": "3_2010_rangement_remanents_andains_P10",
+			"forest_id": 3,
+			"work_type": "rangement_remanents_andains",
+			"parcel": 10,
+			"surface": 1.5437,
+			"price": 4167.990000000001,
+			"year": 2010,
+			"owner": "INDIV_DE_TURQUOIN",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		},
+		"3_2010_rangement_remanents_andains_P13": {
+			"forest_name": "vidaillat",
+			"id": "3_2010_rangement_remanents_andains_P13",
+			"forest_id": 3,
+			"work_type": "rangement_remanents_andains",
+			"parcel": 13,
+			"surface": 1.4666,
+			"price": 3959.8199999999993,
+			"year": 2010,
+			"owner": "INDIV_DE_TURQUOIN",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		}
+	}
+}

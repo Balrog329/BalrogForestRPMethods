@@ -1,0 +1,57 @@
+{
+  "forest_name": "foret_de_palissonais",
+  "parcels": {
+    "4": {
+      "parcel_owner": "Mutuelle Minecraft&moi",
+      "total_area_hectares": 12.5,
+      "sub_parcels": {
+        "4_A": {
+          "description": "Peuplement principal de vieux chênes (Futaie)",
+          "dominant_species": "dynamictrees:oak",
+          "cutting_program": {
+            "target_year": 2028,
+            "status": "PLANIFIE",
+            "type": "Coupe d'éclaircie (Sélection)",
+            "volume_bo_target": 50.0,
+            "volume_be_target": 15.0,
+            "done": false
+          },
+          "silvicultural_works": [
+            {
+              "year": 2026,
+              "type": "Dégagement des semis (Nettoyage)",
+              "status": "EN_COURS",
+              "cost_emeralds": 150
+            },
+            {
+              "year": 2027,
+              "type": "Élagage de pénétration",
+              "status": "PLANIFIE",
+              "cost_emeralds": 80
+            }
+          ]
+        },
+        "4_B": {
+          "description": "Zone de régénération naturelle (Jeunes pousses)",
+          "dominant_species": "dynamictrees:birch",
+          "cutting_program": {
+            "target_year": 2045,
+            "status": "EN_ATTENTE",
+            "type": "Aucune (Trop jeune)",
+            "volume_bo_target": 0,
+            "volume_be_target": 0,
+            "done": false
+          },
+          "silvicultural_works": [
+            {
+              "year": 2026,
+              "type": "Pose de protections contre le gibier (Grillage)",
+              "status": "TERMINE",
+              "cost_emeralds": 300
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"forest": "Vidaillat",
+	"normalized_forest": "vidaillat",
+	"parcel": 9,
+	"parcel_surface": "8ha 45a 51ca",
+	"forest_surface": "136ha 71a 33ca",
+	"owner": "INDIV_DE_TURQUOIN",
+	"manager": "balrog329",
+	"year": 2008,
+	"management_doc": {
+		"start": 2002,
+		"end": 2017
+	},
+	"expertise": [
+		{
+			"species": "dynamictrees:oak",
+			"stems": 153,
+			"total_volume": 336.5,
+			"avg_radius": 5.1,
+			"total_price": 14688
+		},
+		{
+			"species": "dtbwg:fir",
+			"stems": 927,
+			"total_volume": 9610.42,
+			"avg_radius": 7.3,
+			"total_price": 60255
+		},
+		{
+			"species": "dynamictrees:acacia",
+			"stems": 28,
+			"total_volume": 22.98,
+			"avg_radius": 3.5,
+			"total_price": 224
+		}
+	]
+}

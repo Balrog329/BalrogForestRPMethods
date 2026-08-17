@@ -1,0 +1,20 @@
+{
+	"forest": "foret_des_farges",
+	"trees": {
+		"513_447_15.296875": {
+			"measurement_date": 2022,
+			"species": "dtbwg:fir",
+			"radius": 8,
+			"height": 18,
+			"quality": 1,
+			"vol1": 13.078125,
+			"vol2": 0,
+			"forest": "foret_des_farges",
+			"parcel": 15,
+			"owner": "GAN_ALMA_GROUPE",
+			"posx": 513,
+			"posy": 64,
+			"posz": 447
+		}
+	}
+}

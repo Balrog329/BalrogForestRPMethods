@@ -1,0 +1,11 @@
+{
+	"forest": "bois_du_val_varigot",
+	"years": {
+		"2012": {
+			"exploit_P5_2.0625": {
+				"type": "exploitation",
+				"desc": "Parcelle 5,volume 2.06 m³, valeur 96 Z"
+			}
+		}
+	}
+}
