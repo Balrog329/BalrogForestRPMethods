@@ -8,17 +8,17 @@ from server_scripts.BalrogWorldForestServerMethods.utils.ReadConfig import loadC
 
 now = int(time.time() * 1000)
 
-FOREST_NAME = input("Clé de la forêt : ")
+FOREST_NAME = input("Clé du serveur : ")
 
-FOREST_MANAGEMENT = loadConfigData("forest_management")["forestManagement"]
+FOREST_MANAGEMENT = loadConfigData("serversregistry")["serversregistry"]
 
 MINECRAFT_FOLDER = Path(__file__).parents[4]
 
-SAVE_DIR = Path(MINECRAFT_FOLDER) / "saves" / FOREST_MANAGEMENT[FOREST_NAME]["world_dir"]
+SAVE_DIR = Path(MINECRAFT_FOLDER) / "saves" / FOREST_MANAGEMENT[FOREST_NAME]["serverDir"]
 FRONTIER_PATH = Path(SAVE_DIR) / "mapfrontiers" / "frontiers.dat"
 
 KUBEJS_EXPORT_DIR = Path(__file__).parents[3] / "data" / "frontiers"
-GEOJSON_PATH = Path(KUBEJS_EXPORT_DIR) / f"{FOREST_MANAGEMENT[FOREST_NAME]["normalized_world_name"]}_ug.geojson"
+GEOJSON_PATH = Path(KUBEJS_EXPORT_DIR) / f"{FOREST_MANAGEMENT[FOREST_NAME]["normalized_serverName"]}_ug.geojson"
 
 # ⚠ IMPORTANT : FRONTIER_PATH est déjà un fichier, pas un dossier
 OUTPUT_PATH = FRONTIER_PATH

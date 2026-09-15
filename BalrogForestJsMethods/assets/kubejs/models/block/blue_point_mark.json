@@ -1,0 +1,9 @@
+{
+  "parent": "s_a_b:custom/flat",
+  "textures": {
+    "all": "kubejs:block/blue_point_mark",
+    "particle": "kubejs:block/blue_point_mark",
+    "25": "kubejs:block/blue_point_mark"
+  },
+  "render_type": "minecraft:cutout"
+}

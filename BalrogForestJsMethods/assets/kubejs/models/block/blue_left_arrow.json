@@ -1,0 +1,9 @@
+{
+  "parent": "s_a_b:custom/flat",
+  "textures": {
+    "all": "kubejs:block/blue_left_arrow",
+    "particle": "kubejs:block/blue_left_arrow",
+    "25": "kubejs:block/blue_left_arrow"
+  },
+  "render_type": "minecraft:cutout"
+}

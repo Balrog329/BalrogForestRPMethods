@@ -8,34 +8,32 @@ global.verifyAndGetTreeContext = (event) => {
         return false
     }
 
+    if (claimProprieties(event) === false ) {
+        return false
+    }
+
+
     if (event.hand == "OFF_HAND") {
         return false
     }
 
-    if (getMcDimension(player) !== "minecraft:overworld") {
-        messageChat(player, "Veuillez vous rendre dans l'overworld pour effectuer ces opérations...")
-        return false}
-
     let tree_data = callTreeScanner(BlockPos(block.x, block.y, block.z))
+    console.info(tree_data)
+    
+    if (!tree_data || tree_data.tree_species === "none") {return false}
 
-    if (!tree_data || tree_data.tree_species == "none") {return false}
+    let forest_name = global.resolveForestNameByPos(block.x, block.z) || "public"
 
-    const pos = global.treePosMetadata(player, tree_data)
-    if (!pos) {return false}
-
-    let forest_name = pos.normalized_world_name
-
-    global.pos_data = pos
 
     return {
         player: player,
         block: block,
+        facing: event.facing || "north",
         level: event.level,
         sneaking: player["emf$isSneaking"](),
         itemId: getItemId(player.getMainHandItem()),
         contextClass: getContextClass(player),
         tree_data: tree_data,
-        pos_data: pos,
         forest_name: forest_name,
     }
 }

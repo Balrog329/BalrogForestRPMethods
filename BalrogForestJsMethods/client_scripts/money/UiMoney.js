@@ -24,7 +24,7 @@ ClientEvents.tick(event => {
     companies.forEach((c, i) => {
         paintData[`admin_ui_${i}`] = {
             type: "text",
-            text: `§7${c.abreviation}: §a${c.balance} Z`,
+            text: `§7${c.name}: §a${Math.round(c.balance)} Z`,
             x: -2, y: y,
             scale: 0.5,
             alignX: "right",

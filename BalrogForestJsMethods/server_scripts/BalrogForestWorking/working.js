@@ -28,37 +28,34 @@ global.getForestWork = function() {
 
 
 
-function buildForestQuote(player, work_type, parcel, surface) {
+function buildForestQuote(player, property, work_type, parcel, surface) {
 
-    let json_name = `${global.pos_data.normalized_world_name}_forest_quotes`
+    let pos_data = global.forest_management[global.resolveForestNameByPos(player.x, player.z)]
 
-    let database = loadTreeData(player, json_name)
-
-    let quotes_id = `${global.pos_data.id}_${global.pos_data.year}_${work_type}_P${parcel}`
-    if (!database.quotes) {
-        database.quotes = {}
+    let quotes_id = `${property}_${global.server_date.year}_${work_type}_P${parcel}`
+    if (!global.forest_quotes.quotes) {
+        global.forest_quotes.quotes = {}
     }
 
-    database.quotes[quotes_id] = {
-        forest_name: global.pos_data.normalized_world_name,
+    global.forest_quotes.quotes[quotes_id] = {
+        forest_name: pos_data.normalized_world_name,
         id: quotes_id,
 
-        forest_id: global.pos_data.id,
+        forest_id: property,
         work_type: work_type,
         parcel: parcel,
         surface: surface,
         price: setTotalPrice(work_type, surface),
 
-        year: global.pos_data.year,
-        owner: global.pos_data.owner,
-        referent_manager: global.pos_data.referent_manager,
+        year: global.server_date.year,
+        owner: pos_data.owner,
+        referent_manager: pos_data.referent_manager,
         status: "pending"
 
     }
 
-    saveTreeData(player, json_name, database)
-    messageChat(player, `Le devis pour ${work_type} est proposé pour la somme de ${database.quotes[quotes_id].price}`)
-    return database.quotes[quotes_id]
+    messageChat(Utils.server, `Le devis pour ${work_type} est proposé pour la somme de ${global.forest_quotes.quotes[quotes_id].price}`)
+    return global.forest_quotes.quotes[quotes_id]
 
 }
 
@@ -91,41 +88,34 @@ function getPerimeterFromHa(surfaceHa) {
 
 global.getQuotes = function(player, year) {
 
-    const database = loadTreeData(player,`${global.pos_data.normalized_world_name}_forest_quotes`)
-    if (!database.quotes) {return []}
+    if (!global.forest_quotes.quotes) {return []}
 
-    return Object.keys(database.quotes).filter(quotes_id => database.quotes[quotes_id].year === year)
+    return Object.keys(global.forest_quotes.quotes).filter(quotes_id => global.forest_quotes.quotes[quotes_id].year === year)
 }
 
 
 function acceptQuotes(player, quote_id) {
 
-    let json_name = `${global.pos_data.normalized_world_name}_forest_quotes`
 
-    let database = loadTreeData(player, json_name)
-
-    let quote = database.quotes[quote_id]
-    if (quote.status == "accepted"){
-        messageChat(player, "Ce devis à deja été accepter")
+    let quote = global.forest_quotes.quotes[quote_id]
+    if (quote.status === "accepted"){
+        messageChat(Utils.server, "Ce devis à deja été accepté")
         return
     }
-    if (quote.year + 2 < global.pos_data.year) {
-        messageChat(player, "Ce devis n'est plus valide")
+    if (quote.year + 2 < global.server_date.year) {
+        messageChat(Utils.server, "Ce devis n'est plus valide")
         return
     }
 
     quote.status = "accepted"
 
-    saveTreeData(player, json_name, database)
+    messageChat(Utils.server, `✔ Le devis ${quote.id} a été accepté pour ${quote.price} Z.`)
 
-    messageChat(player, `✔ Le devis ${quote.id} a été accepté pour ${quote.price} Z.`)
-
-    transaction(global.pos_data.owner, "BANK", quote.price)
+    transaction(quote.owner, "BANK", quote.price)
     addInManagementBook(
-        player,
         quote_id,
         "travaux",
-        global.pos_data.year,
+        quote.forest_id,
         quote.parcel,
         `Parcelle ${quote.parcel}, Les travaux ${quote.work_type} ont été accepté pour ${quote.price} Z.`
     )

@@ -11,6 +11,7 @@ public class TreeData {
     public String rooty_block;
     public double volume_total = 0.0;
     public List<BranchInfo> branch = new ArrayList<>();
+    public boolean is_dead = true;
 
     public TreeData(String tree_species, int x, int y, int z, String rooty_block) {
         this.tree_species = tree_species;

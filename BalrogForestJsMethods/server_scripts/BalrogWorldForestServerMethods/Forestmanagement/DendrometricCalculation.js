@@ -8,9 +8,10 @@ function getTreeBaseRadius(tree_data) {
  * et en ignorant les sections si le total est inférieur à deux mètres.
  * @param {object} tree_data données issues du scanneur
  * @param {object} config Configuration propre à l'arbre
+ * @param is_hammerable bool
  * @returns {array} Une liste d'objets segments, ou un tableau vide si inférieur à 2m
  */
-function getTreeLogSegments(tree_data, config, min_radius) {
+function getTreeLogSegments(tree_data, config, is_hammerable) {
     let branch_list = tree_data.branch
     let valid_segments = []
 
@@ -26,12 +27,14 @@ function getTreeLogSegments(tree_data, config, min_radius) {
         let current_z = Number(b.z)
         let current_radius = Number(b.radius)
         let current_volume = Number(b.volume)
+        let min_radius
 
         // Ignorer la racine elle-même
         if (current_y <= Number(tree_data.y)) continue
-
-        // Vérifier le rayon minimum
-        if (min_radius == undefined || 0){
+        
+        if (is_hammerable === true) {
+            min_radius = config.min_log_radius
+        } else if (is_hammerable === false) {
             min_radius = config.min_count_radius
         }
 
@@ -89,36 +92,6 @@ function getTreePositionRaw(block) {
     }
 }
 
-
-function findTreePosMark(player, block, mark_config) {
-
-    for (let key in mark_config.marks) {
-
-        let mark = mark_config.marks[key]
-
-        let dx = mark.offset[0]
-        let dy = mark.offset[1]
-        let dz = mark.offset[2]
-
-        addTreeMark(player, `${block.x + dx} ${block.y + dy} ${block.z + dz}`,mark.block)
-    }
-}
-
-function addTreeMark(player, pos, blockId) {
-    player.runCommandSilent(`setblock ${pos} ${blockId} replace`)
-}
-
-function deleteTreeMark(player, tree_data) {
-
-    const x = tree_data.posx;
-    const y = tree_data.posy + 2;
-    const z = tree_data.posz;
-
-    addTreeMark(player, `${x - 1} ${y} ${z}`, "minecraft:air");
-    addTreeMark(player, `${x + 1} ${y} ${z}`, "minecraft:air");
-    addTreeMark(player, `${x} ${y} ${z - 1}`, "minecraft:air");
-    addTreeMark(player, `${x} ${y} ${z + 1}`, "minecraft:air");
-}
 
 /**
  * Récupère les données d'une branche selon un critère spécifique.

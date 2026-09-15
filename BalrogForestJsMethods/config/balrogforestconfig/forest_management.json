@@ -1,0 +1,15 @@
+{
+	"public": {
+		"name_id": "public",
+		"id": 0,
+		"world_name": "testdesnbt",
+		"world_dir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/testdesnbt",
+		"normalized_world_name": "public",
+		"Surface": 0,
+		"owner": "BANK",
+		"referent_manager": "BANK",
+		"current_year": 0,
+		"start_current_mdoc": 0,
+		"end_current_mdoc": 0
+	}
+}

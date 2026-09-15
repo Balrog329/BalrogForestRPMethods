@@ -1,46 +1,51 @@
 
+function measureTree(tree_data) {
+    const species = tree_data.tree_species
+    const cfg = global.species_config[species]
 
-function measureTree(player, tree_data, pos) {
-    let tree_config_data = loadConfigData(player, "speciesdata")[tree_data.tree_species]
+    const id = `${getTreePositionStr(tree_data)}_${tree_data.volume_total}`
+    const radius = getTreeBaseRadius(tree_data)
 
-    let id = `${getTreePositionStr(tree_data)}_${tree_data.volume_total}`
+    const is_hammerable = testIfHammerableTree(tree_data.tree_species, radius)
+    const segments = getTreeLogSegments(tree_data, cfg, is_hammerable)
+    const height = segments.length
+    if (height === 0) return
 
-    let tree_logs_segments = getTreeLogSegments(tree_data, tree_config_data)
-  
-    let height = tree_logs_segments.length
-    if (height == 0) {return}
+    const level = Utils.server.getLevel("minecraft:overworld").getBlock(tree_data.x, tree_data.y, tree_data.z).properties.fertility
 
-    let quality = 0
-    if (player.level.getBlock(tree_data.x, tree_data.y, tree_data.z).properties.fertility == 0) {
-        quality = 2 // bois sec
+    const quality = level === 0 ? 2 : cfg.default_quality
+
+
+    const vol1 = getLogVolume(segments)
+    const vol2 = getEnergyVolume(tree_data.branch, segments, cfg.min_count_radius)
+
+    const forest = global.resolveForestNameByPos(tree_data.x, tree_data.z)
+    const parcel = global.resolveParcelNameByPos(tree_data.x, tree_data.z)
+    const owner = global.forest_management[forest].owner
+
+    return addDatTrees(id, species, radius, height, quality, tree_data, vol1, vol2, forest, parcel, owner)
+}
+
+function treeAnnouncement(advertiser, pointer, tree_id) {
+    let dt = global.trees_database.trees[tree_id]
+    let species = global.species_config[dt.species].french_name
+    let radius = dt.radius
+    let height
+    let dead
+    if (dt.height === 10) {
+        height = "deca"
+    } else {
+        height = `par ${dt.height}`
     }
-    else {
-        quality = tree_config_data.default_quality
+
+    if (dt.is_dead === true) {
+        dead = ", sec"
+    } else {
+        dead = ""
     }
 
-    let radius = getTreeBaseRadius(tree_data);
-    let log_volume = getLogVolume(tree_logs_segments);
-    let energy_volume = getEnergyVolume(tree_data.branch, tree_logs_segments, tree_config_data.min_count_radius)
-
-    global.trees_database.trees[id] = {
-        measurement_date: pos.year,
-        species: tree_data.tree_species,
-        radius: radius,
-        height: height,
-        quality: quality,
-        vol1: log_volume,
-        vol2: energy_volume,
-        forest: pos.normalized_world_name,
-        parcel: pos.parcel,
-        owner: pos.owner,
-        posx: tree_data.x,
-        posy: tree_data.y,
-        posz: tree_data.z
-    }
-
-    // console.info(` parcel ${pos.parcel} ; ${tree_data.tree_species} ; ${radius} x ${height} qlt : ${quality}, vol1 : ${log_volume} m³, vol2 : ${energy_volume} m³`)
-
-    return id
+    messageChat(Utils.server, `§b§l${advertiser} : ${species}, ${radius} ${height} ${dead} !`)
+    messageChat(Utils.server, `§2§l${pointer} : ${species}, ${radius} ${height} ${dead} !`)
 }
 
 
@@ -84,7 +89,8 @@ function recoverLostTrees(player) {
             let fake_event = {
                 player: player,
                 level: player.level,
-                block: block
+                block: block,
+                facing: "north"
             }
 
             let ctx = global.verifyAndGetTreeContext(fake_event)
@@ -113,4 +119,50 @@ function recoverLostTrees(player) {
 
     messageChat(player, `✔ ${recovered} arbres restaurés dans ${forest}.`
     )
+}
+
+
+function restoretreesLot(player) {
+    for (let tree_id in global.trees_database.trees) {
+        let tree_data = global.trees_database.trees[tree_id]
+        if (Number(tree_data.parcel) === 30 || Number(tree_data.parcel) === 32) {
+            let block = Utils.server.getLevel("minecraft:overworld").getBlock(tree_data.posx - 1, tree_data.posy + 1, tree_data.posz)
+            if (block === 'kubejs:red_foot_mark[facing=west]') {
+                let fakeEvent = {
+                    player: player,
+                    level: player.level,
+                    block: player.level.getBlock(tree_data.posx, tree_data.posy + 1, tree_data.posz),
+                    facing: "north"
+                }
+
+                let ctx = global.verifyAndGetTreeContext(fakeEvent)
+                if (!ctx) continue
+
+                let id = id = handleHammerEvent(ctx)
+            }
+        }
+    }
+}
+
+function restoretreesMarked(player, parcel) {
+    for (let tree_id in global.trees_database.trees) {
+        let tree_data = global.trees_database.trees[tree_id]
+        if (String(tree_data.parcel) === String(parcel)) {
+            let block = Utils.server.getLevel("minecraft:overworld").getBlock(tree_data.posx, tree_data.posy + 2, tree_data.posz - 1)
+            if (block === 'kubejs:red_oblique_mark[facing=north]') {
+                let fakeEvent = {
+                    player: player,
+                    level: player.level,
+                    block: player.level.getBlock(tree_data.posx, tree_data.posy + 1, tree_data.posz),
+                    facing: "north"
+                }
+
+                let ctx = global.verifyAndGetTreeContext(fakeEvent)
+                if (!ctx) continue
+
+                let id = handleMarkingEvent(ctx, "abandon" )
+                console.info("restored " + id)
+            }
+        }
+    }
 }

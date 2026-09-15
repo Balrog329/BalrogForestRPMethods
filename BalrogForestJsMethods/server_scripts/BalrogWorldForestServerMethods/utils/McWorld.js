@@ -10,10 +10,10 @@ function getMcWorld(player) {
 function parseMcWorld(world){
     return world.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "_")
 }
-
-function messageChat(player, message) {
-    if (!player) return
-    player.tell(message)
+// entities = Utils.server ou player
+function messageChat(entities, message) {
+    if (!entities) return
+    entities.tell(message)
 }
 
 function getBlockId(block) {
@@ -23,3 +23,6 @@ function getBlockId(block) {
 function getItemId(item) {
     return item.id
 }
+
+
+

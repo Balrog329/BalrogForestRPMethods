@@ -7,4 +7,3 @@ function getContextClass(player){
 function callTreeScanner(block_pos){
     return Java.loadClass('com.balrogforestjv.balrogforestjv.TreeScanner').scanTree(block_pos)
 }
-

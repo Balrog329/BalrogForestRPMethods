@@ -1,0 +1,123 @@
+{
+    "treesdatabase": {
+        "path": "kubejs/data/",
+        "key_name": "treesdatabase"
+    },
+
+    "lotdatabase": {
+        "path":"kubejs/data/",
+        "key_name" : "lotdatabase"
+    },
+    
+    "speciesdata": {
+        "path": "kubejs/config/",
+        "key_name": "speciesdata"
+    },
+
+    "treeMark": {
+    "abandon": {
+        "mark_name": "abandon",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "kubejs:red_oblique_mark[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "kubejs:red_oblique_mark[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    },
+
+    "hammering": {
+        "mark_name": "hammered",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "kubejs:red_horizontal_hammering[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "kubejs:red_horizontal_hammering[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "kubejs:red_horizontal_mark[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "kubejs:red_horizontal_mark[facing=west]"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "kubejs:red_foot_mark[facing=west]"
+        }
+        }
+    },
+
+
+    "futur": {
+        "mark_name": "futur",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "kubejs:blue_horizontal_mark[facing=north]"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "kubejs:blue_horizontal_mark[facing=south]"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "kubejs:blue_horizontal_mark[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "kubejs:blue_horizontal_mark[facing=west]"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    },
+
+    "counted": {
+        "mark_name": "counted",
+        "marks": {
+        "north": {
+            "offset": [0, 0, -1],
+            "block": "minecraft:air"
+        },
+        "south": {
+            "offset": [0, 0, 1],
+            "block": "minecraft:air"
+        },
+        "east": {
+            "offset": [1, 0, 0],
+            "block": "kubejs:blue_point_mark[facing=east]"
+        },
+        "west": {
+            "offset": [-1, 0, 0],
+            "block": "minecraft:air"
+        },
+        "foot": {
+            "offset": [-1, -1, 0],
+            "block": "minecraft:air"
+        }
+        }
+    }
+    }
+}

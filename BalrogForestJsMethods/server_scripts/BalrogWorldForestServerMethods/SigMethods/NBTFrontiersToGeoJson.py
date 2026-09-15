@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 import nbtlib
 
+import geopandas as gpd
+
 # ---------------------------------------------------------
 # Conversion NBT → GEOJSON Note consigne :
 
@@ -107,6 +109,8 @@ def convert_frontiers_to_geojson():
         geojson["features"].append(feature)
     
     files = [PDC_EXPORT_NAME]
+
+
     export(geojson, files)
 
     print(f"✔ Fusion réussie ! GeoJSON générés")

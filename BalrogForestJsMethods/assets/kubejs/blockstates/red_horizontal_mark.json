@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "kubejs:block/red_horizontal_mark"
+    },
+    "facing=east": {
+      "model": "kubejs:block/red_horizontal_mark",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "kubejs:block/red_horizontal_mark",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/red_horizontal_mark",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "kubejs:block/red_horizontal_mark",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "kubejs:block/red_horizontal_mark",
+      "x": 90
+    }
+  }
+}

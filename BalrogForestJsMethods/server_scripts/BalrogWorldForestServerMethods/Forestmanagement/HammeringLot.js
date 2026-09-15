@@ -1,37 +1,25 @@
 function getLotId(pos_data, lot_id) {
     if (!lot_id) {return}
-    return `${pos_data.id}_${pos_data.year}_${lot_id}`
+    return `${pos_data.id}_${global.server_date.year}_${lot_id}`
 }
 
-function getLot(player, pos_data, lot_id) {
 
-    let json_name = `${pos_data.normalized_world_name}LotDatabase`
-    let database = loadLotData(player, pos_data.normalized_world_name, json_name)
-
-    if (!database.lots[String(pos_data.year)]) {
-        database.lots[String(pos_data.year)] = {}
-    }
-
-    if (!database.lots[String(pos_data.year)][lot_id]) {return}
-    
-    return {
-        json_name: json_name,
-        database: database,
-        lot: database.lots[String(pos_data.year)][lot_id]
-    }
-}
-
-function createNewLot(player, pos_data, cut_type_key, lot_id) {
+function createNewLot(player, cut_type_key, lot_id) {
     console.info(`[BWFM] Création d'un nouveau lot : ${lot_id} (${cut_type_key})`)
-    let new_lot_id = getLotId(pos_data, lot_id)
-    let json_name = `${pos_data.normalized_world_name}LotDatabase`
-    let database = loadLotData(player, pos_data.normalized_world_name, json_name)
 
-    if (!database.lots[new_lot_id]) {
-        database.lots[new_lot_id] = {}
+    const pos_data = global.forest_management[global.resolveForestNameByPos(player.x, player.z)]
+    if (!pos_data) {
+        messageChat(Utils.server, 'Pas de propriété ici !')
+        return
     }
 
-    database.lots[new_lot_id] = {
+    let new_lot_id = getLotId(pos_data, lot_id)
+
+    if (!global.lot_database.lots[new_lot_id]) {
+        global.lot_database.lots[new_lot_id] = {}
+    }
+
+    global.lot_database.lots[new_lot_id] = {
         
         forest_name: pos_data.normalized_world_name,
         id: new_lot_id,
@@ -39,7 +27,7 @@ function createNewLot(player, pos_data, cut_type_key, lot_id) {
         forest_id: pos_data.id,
         cut_type: cut_type_key,
 
-        year: pos_data.year,
+        year: global.server_date.year,
 
         owner: pos_data.owner,
         referent_manager: pos_data.referent_manager,
@@ -53,19 +41,15 @@ function createNewLot(player, pos_data, cut_type_key, lot_id) {
         trees: {}
     }
 
-    saveTreeData(player, json_name, database)
-
-    return database.lots[new_lot_id]
+    return global.lot_database.lots[new_lot_id]
 }
 
 /**
  * Recalcule le volume total (bois d'œuvre et bois-énergie) d'un lot
  * à partir de la liste de ses arbres enregistrés.
- * @param {object} player - Le joueur
- * @param {object} pos_data - Les données de position 
  * @param {object} lot - L'objet lot à mettre à jour
  */
-function calculLotVolume(player, lot) {
+function calculLotVolume(lot) {
 
     let total_vol1 = 0
     let total_vol2 = 0
@@ -86,17 +70,12 @@ function calculLotVolume(player, lot) {
 
 /**
  * Recherche un lot dans la BDD des lots par années et/ou par parcelle
- * @param {object} player - Le joueur
  * @param {object}  year - L'année du lot à rechercher
  * @returns {object|null} - L'objet lot trouvé ou null si non trouvé
  */
 
-global.getLots = function(player, year) {
-
-    const database = loadTreeData(player,`${global.pos_data.normalized_world_name}LotDatabase`)
-    if (!database.lots) {return []}
-
-    return Object.keys(database.lots).filter(lot_id => database.lots[lot_id].year === year)
+global.getLots = function (year) {
+    return Object.keys(global.lot_database.lots).filter(lot_id => global.lot_database.lots[lot_id].year === year)
 }
 
 

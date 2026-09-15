@@ -1,0 +1,67 @@
+{
+	"serversregistry": {
+		"foret_de_palissonais": {
+			"serverName": "Forêt de Palissonais",
+			"normalized_serverName": "foret_de_palissonais",
+			"world_dir": "PALISSONAIS",
+			"offline_time_coef": 0.1425555,
+			"isclaim": false,
+			"proprietiesInServer": {
+				"foret_de_palissonais": "foret_de_palissonais",
+				"bois_de_la_forgeotte": "bois_de_la_forgeotte",
+				"prairie_du_forgeotte": "prairie_du_forgeotte",
+				"pres_des_vignes": "pres_des_vignes",
+				"les_coteaux": "les_coteaux",
+				"terres_hautes": "terres_hautes",
+				"terre_de_la_langue_du_boeuf": "terre_de_la_langue_du_boeuf"
+			}
+		},
+		"foret_du_borgneuf": {
+			"serverName": "Forêt du Borgneuf",
+			"normalized_serverName": "foret_du_borgneuf",
+			"mcDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds",
+			"offline_time_coef": 0,
+			"isclaim": false,
+			"serversPath": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves",
+			"serverDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/foret_du_borgneuf_dt",
+			"proprietiesInServer": {}
+		},
+		"vidaillat": {
+			"serverName": "Vidaillat",
+			"normalized_serverName": "vidaillat",
+			"mcDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds",
+			"offline_time_coef": 0.14255555,
+			"isclaim": false,
+			"serversPath": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves",
+			"serverDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/Vidaillat",
+			"proprietiesInServer": {}
+		},
+		"bois_de_la_forgeotte": {
+			"serverName": "Bois de la Forgeotte",
+			"normalized_serverName": "bois_de_la_forgeotte",
+			"mcDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds",
+			"offline_time_coef": 0,
+			"serversPath": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves",
+			"serverDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/bois_de_la_forgeotte",
+			"isclaim": false,
+			"proprietiesInServer": {
+				"bois_de_la_forgeotte": "bois_de_la_forgeotte",
+				"prairie_du_forgeotte": "prairie_du_forgeotte",
+				"pres_des_vignes": "pres_des_vignes",
+				"les_coteaux": "les_coteaux",
+				"terres_hautes": "terres_hautes",
+				"terre_de_la_langue_du_boeuf": "terre_de_la_langue_du_boeuf"
+			}
+		},
+		"dynamictrees_test": {
+			"serverName": "dynamictrees test",
+			"normalized_serverName": "dynamictrees_test",
+			"mcDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds",
+			"offline_time_coef": 0,
+			"serversPath": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves",
+			"serverDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/dynamictrees test",
+			"isclaim": false,
+			"proprietiesInServer": {}
+		}
+	}
+}

@@ -49,6 +49,9 @@ public class TreeScanner {
             public boolean run(BlockState blockState, LevelAccessor world, BlockPos blockPos, Direction fromDir) {
                 if (TreeHelper.isBranch(blockState)) {
                     int radius = TreeHelper.getRadius(world, blockPos);
+                    if (radius == 1) {
+                        data.is_dead = false;
+                    }
 
                     double rawVoxelVolume = radius * radius * 64;
                     double officialSegmentVolume = rawVoxelVolume / 4096.0;

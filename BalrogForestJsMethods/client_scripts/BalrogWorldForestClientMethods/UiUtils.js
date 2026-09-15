@@ -1,8 +1,7 @@
 
 function uiLotText(player, lot_id) {
-    let json_name = `${global.pos_data.normalized_world_name}LotDatabase`
 
-    let database = global.globloadTreeData(player, json_name).lots[lot_id]
+    let database = global.lot_database.lots[lot_id]
 
     player.paint({
         lot_id: _uiLotUtils(`Lot : ${database.id}`, 50),

@@ -30,6 +30,526 @@
 			"type": "exploit_up",
 			"parcel": 2,
 			"desc": "Exploitation en UP de 437.546875 dans la parcelle 2 terminée"
+		},
+		"1_2015_plantation_P102": {
+			"year": 2015,
+			"type": "travaux",
+			"parcel": 102,
+			"desc": "Parcelle 102, Les travaux plantation ont été accepté pour 16928.30121413848 Z."
+		},
+		"1_2015_repulsif_trico_P102": {
+			"year": 2015,
+			"type": "travaux",
+			"parcel": 102,
+			"desc": "Parcelle 102, Les travaux repulsif_trico ont été accepté pour 3009.4757714023963 Z."
+		},
+		"fs_1_2015_PAL_P30_AME": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P30_AME, vendu à BEXTBOIS pour 474224"
+		},
+		"fs_1_2015_P51_DOU": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_P51_DOU, vendu à BEXTBOIS pour 89636"
+		},
+		"fs_1_2015_PAL_P34_ER": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P34_ER, vendu à BEXTBOIS pour 1201529"
+		},
+		"fs_1_2015_PAL_P35_SV": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P35_SV, vendu à COFOR_CENTRE pour 495479"
+		},
+		"fs_1_2015_PAL_P52_ACS": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P52_ACS, vendu à PIVOTSCIAGE pour 44971"
+		},
+		"fs_1_2015_PAL_P26_EPS": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P26_EPS, vendu à PIVOTSCIAGE pour 159811"
+		},
+		"fs_1_2015_PAL_P10_EPS_SP": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P10_EPS_SP, vendu à PIVOTSCIAGE pour 20249"
+		},
+		"1_2015_PAL_P35_SV": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 35,
+			"desc": "Lot n°1_2015_PAL_P35_SV, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"2015351535.75": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 35,
+			"desc": "Exploitation en UP de 1535.75 dans la parcelle 35 terminée"
+		},
+		"20153549.640625": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 35,
+			"desc": "Exploitation en UP de 49.640625 dans la parcelle 35 terminée"
+		},
+		"2015352.09375": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 35,
+			"desc": "Exploitation en UP de 2.09375 dans la parcelle 35 terminée"
+		},
+		"1_2015_PAL_P34_ER": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 35,
+			"desc": "Lot n°1_2015_PAL_P34_ER, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"20153463.859375": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 34,
+			"desc": "Exploitation en UP de 63.859375 dans la parcelle 34 terminée"
+		},
+		"20155281.21875": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 52,
+			"desc": "Exploitation en UP de 81.21875 dans la parcelle 52 terminée"
+		},
+		"1_2015_PAL_P52_ACS": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 52,
+			"desc": "Lot n°1_2015_PAL_P52_ACS, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"1_2015_P51_DOU": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 51,
+			"desc": "Lot n°1_2015_P51_DOU, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"1_2015_PAL_P26_EPS": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 26,
+			"desc": "Lot n°1_2015_PAL_P26_EPS, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"1_2015_PAL_P10_EPS_SP": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 10,
+			"desc": "Lot n°1_2015_PAL_P10_EPS_SP, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"2026-8-24_19h29": {
+			"year": 2015,
+			"type": "note",
+			"parcel": 41,
+			"desc": null
+		},
+		"2026-8-24_19h30": {
+			"year": 2015,
+			"type": "note",
+			"parcel": 41,
+			"desc": "tropbelleparcelle"
+		},
+		"fs_1_2015_PAL_P18_test": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P18_test, vendu à BEXTBOIS pour 1195"
+		},
+		"1_2015_PAL_P18_test": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 18,
+			"desc": "Lot n°1_2015_PAL_P18_test, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"fs_1_2015_PAL_P18_chablis_1": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P18_chablis_1, vendu à BEXTBOIS pour 3396"
+		},
+		"1_2015_PAL_P18_chablis_1": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 18,
+			"desc": "Lot n°1_2015_PAL_P18_chablis_1, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"fs_1_2015_PAL_P18_chablis_2": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": null,
+			"desc": "Lot n°1_2015_PAL_P18_chablis_2, vendu à BEXTBOIS pour 2758"
+		},
+		"1_2015_PAL_P18_chablis_2": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 17,
+			"desc": "Lot n°1_2015_PAL_P18_chablis_2, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"2015171.65625": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 17,
+			"desc": "Exploitation en UP de 1.65625 dans la parcelle 17 terminée"
+		},
+		"1_2015_degagement_ligne_P102": {
+			"year": 2015,
+			"type": "travaux",
+			"parcel": 102,
+			"desc": "Parcelle 102, Les travaux degagement_ligne ont été accepté pour 3383.6400000000003 Z."
+		},
+		"1_2015_PAL_P30_32": {
+			"year": 2015,
+			"type": "lot_bp",
+			"parcel": 32,
+			"desc": "Lot n°1_2015_PAL_P30_32, l'exploitation (abattage+débardage) de ce lot est terminé"
+		},
+		"1_2015_broyage_plein_ou_bande_P6": {
+			"year": 2015,
+			"type": "travaux",
+			"parcel": 6,
+			"desc": "Parcelle 6, Les travaux broyage_plein_ou_bande ont été accepté pour 10049.939999999999 Z."
+		},
+		"2026-8-26_22h47": {
+			"year": 2015,
+			"type": "note",
+			"parcel": 38,
+			"desc": "mise_en_attente_car_trop_ouvert"
+		},
+		"2026-8-26_22h48": {
+			"year": 2015,
+			"type": "note",
+			"parcel": 39,
+			"desc": "mise_en_attente_si_coupe_alors_amelio_pas_renouvellement"
+		},
+		"201530686.375": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 30,
+			"desc": "Exploitation en UP de 686.375 dans la parcelle 30 terminée"
+		},
+		"201510229.484375": {
+			"year": 2015,
+			"type": "exploit_up",
+			"parcel": 10,
+			"desc": "Exploitation en UP de 229.484375 dans la parcelle 10 terminée"
+		},
+		"11131.5": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 131.5 dans la parcelle 1 terminée"
+		},
+		"11813.921875": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 813.921875 dans la parcelle 1 terminée"
+		},
+		"11700.875": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 700.875 dans la parcelle 1 terminée"
+		},
+		"116017.703125": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 6017.703125 dans la parcelle 1 terminée"
+		},
+		"111367.25": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1367.25 dans la parcelle 1 terminée"
+		},
+		"111517.03125": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1517.03125 dans la parcelle 1 terminée"
+		},
+		"112990.015625": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 2990.015625 dans la parcelle 1 terminée"
+		},
+		"112681.90625": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 2681.90625 dans la parcelle 1 terminée"
+		},
+		"117845.359375": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 7845.359375 dans la parcelle 1 terminée"
+		},
+		"111474.265625": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1474.265625 dans la parcelle 1 terminée"
+		},
+		"111299.15625": {
+			"year": 1,
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1299.15625 dans la parcelle 1 terminée"
+		},
+		"117.5625": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 7.5625 dans la parcelle 1 terminée"
+		},
+		"1144.5625": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 44.5625 dans la parcelle 1 terminée"
+		},
+		"114962.515625": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 4962.515625 dans la parcelle 1 terminée"
+		},
+		"2026-9-4_7h18": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "note",
+			"parcel": 1,
+			"desc": "extraction_a_faire_grandis"
+		},
+		"111203.21875": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1203.21875 dans la parcelle 1 terminée"
+		},
+		"121014.328125": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 2,
+			"desc": "Exploitation en UP de 1014.328125 dans la parcelle 2 terminée"
+		},
+		"111509.6875": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 1,
+			"desc": "Exploitation en UP de 1509.6875 dans la parcelle 1 terminée"
+		},
+		"121424.640625": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 2,
+			"desc": "Exploitation en UP de 1424.640625 dans la parcelle 2 terminée"
+		},
+		"fs_6_1_FOR_P1_2": {
+			"year": 1,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°6_1_FOR_P1_2, vendu à BEXTBOIS pour 487473",
+			"desc": null
+		},
+		"fs_6_1_FOR_EXTR": {
+			"year": 1,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°6_1_FOR_EXTR, vendu à BEXTBOIS pour 775613",
+			"desc": null
+		},
+		"6_1_FOR_EXTR": {
+			"year": 1,
+			"proprietie": 4,
+			"type": "lot_bp",
+			"parcel": "Lot n°6_1_FOR_EXTR, l'exploitation (abattage+débardage) de ce lot est terminé",
+			"desc": null
+		},
+		"6_1_FOR_P1_2": {
+			"year": 1,
+			"proprietie": 2,
+			"type": "lot_bp",
+			"parcel": "Lot n°6_1_FOR_P1_2, l'exploitation (abattage+débardage) de ce lot est terminé",
+			"desc": null
+		},
+		"1218.171875": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 2,
+			"desc": "Exploitation en UP de 18.171875 dans la parcelle 2 terminée"
+		},
+		"1314.796875": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 3,
+			"desc": "Exploitation en UP de 14.796875 dans la parcelle 3 terminée"
+		},
+		"1464.15625": {
+			"year": 1,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 4,
+			"desc": "Exploitation en UP de 64.15625 dans la parcelle 4 terminée"
+		},
+		"201632480.25": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 32,
+			"desc": "Exploitation en UP de 480.25 dans la parcelle 32 terminée"
+		},
+		"201657.03125": {
+			"year": 2016,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 5,
+			"desc": "Exploitation en UP de 7.03125 dans la parcelle 5 terminée"
+		},
+		"201657.34375": {
+			"year": 2016,
+			"proprietie": "bois_de_la_forgeotte",
+			"type": "exploit_up",
+			"parcel": 5,
+			"desc": "Exploitation en UP de 7.34375 dans la parcelle 5 terminée"
+		},
+		"fs_1_2016_PAL_P9_10": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_P9_10, vendu à BEXTBOIS pour 383413",
+			"desc": null
+		},
+		"fs_1_2016_PAL_EMPRISE_ROUTE_FORGEOTTE": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_EMPRISE_ROUTE_FORGEOTTE, vendu à BEXTBOIS pour 57756",
+			"desc": null
+		},
+		"fs_1_2016_PAL_P6_SEC_016": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_P6_SEC_016, vendu à BEXTBOIS pour 68189",
+			"desc": null
+		},
+		"fs_1_2016_PAL_P49_50_51": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_P49_50_51, vendu à BEXTBOIS pour 419260",
+			"desc": null
+		},
+		"fs_1_2016_PAL_P33_FLS": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_P33_FLS, vendu à BEXTBOIS pour 95223",
+			"desc": null
+		},
+		"fs_1_2016_PAL_P1_AME": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°1_2016_PAL_P1_AME, vendu à BEXTBOIS pour 87160",
+			"desc": null
+		},
+		"fs_6_2016_FOR_P6_DOU": {
+			"year": 2016,
+			"proprietie": null,
+			"type": "lot_bp",
+			"parcel": "Lot n°6_2016_FOR_P6_DOU, vendu à BEXTBOIS pour 252848",
+			"desc": null
+		},
+		"foret_de_palissonais_2016_broyage_plein_ou_bande_P24": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "travaux",
+			"parcel": 24,
+			"desc": "Parcelle 24, Les travaux broyage_plein_ou_bande ont été accepté pour 9786.960000000001 Z."
+		},
+		"foret_de_palissonais_2016_broyage_plein_ou_bande_P25": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "travaux",
+			"parcel": 25,
+			"desc": "Parcelle 25, Les travaux broyage_plein_ou_bande ont été accepté pour 526.23 Z."
+		},
+		"foret_de_palissonais_2016_entretien_interlignes_plein_P102": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "travaux",
+			"parcel": 102,
+			"desc": "Parcelle 102, Les travaux entretien_interlignes_plein ont été accepté pour 3568.9125000000004 Z."
+		},
+		"2016812801.8125": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 8,
+			"desc": "Exploitation en UP de 12801.8125 dans la parcelle 8 terminée"
+		},
+		"2016127224.59375": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 12,
+			"desc": "Exploitation en UP de 7224.59375 dans la parcelle 12 terminée"
+		},
+		"2016113071.546875": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 11,
+			"desc": "Exploitation en UP de 3071.546875 dans la parcelle 11 terminée"
+		},
+		"20161727.828125": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 17,
+			"desc": "Exploitation en UP de 27.828125 dans la parcelle 17 terminée"
+		},
+		"2016177.5625": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 17,
+			"desc": "Exploitation en UP de 7.5625 dans la parcelle 17 terminée"
+		},
+		"2016178.921875": {
+			"year": 2016,
+			"proprietie": "foret_de_palissonais",
+			"type": "exploit_up",
+			"parcel": 17,
+			"desc": "Exploitation en UP de 8.921875 dans la parcelle 17 terminée"
 		}
 	}
 }

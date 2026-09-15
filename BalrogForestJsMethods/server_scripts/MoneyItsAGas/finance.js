@@ -29,9 +29,9 @@ ServerEvents.tick(event => {
 })
 
 
-function getTreeLogDynamicPrice(player, species, quality) {
+function getTreeLogDynamicPrice(species, quality, is_dead) {
 
-    const speciesdata = loadConfigData(player, "speciesdata")[species]
+    const speciesdata = global.species_config[species]
 
     let log_base_price = speciesdata.log_base_price
 
@@ -41,7 +41,7 @@ function getTreeLogDynamicPrice(player, species, quality) {
 
     let price = log_base_price * global.economy.current_rate
 
-    if (quality === 2) {
+    if (is_dead === true) {
         price = price / 2
     }
 
@@ -50,21 +50,18 @@ function getTreeLogDynamicPrice(player, species, quality) {
 
 
 
-function getRedemptionPrice(player, lot_id) {
-    
-    const lot = loadLotData(player, global.pos_data.normalized_world_name, `${global.pos_data.normalized_world_name}LotDatabase`).lots[lot_id]
-    const trees_database = global.trees_database.trees
-    
-    let price = 0
-    for (let tree in lot.trees) {
+function getRedemptionPrice(lot_id) {
 
-        const treeData = trees_database[tree]
+    let price = 0
+    for (let tree in global.lot_database.lots[lot_id].trees) {
+
+        const treeData = global.trees_database.trees[tree]
 
         if (!treeData) {
             console.info(`Arbre absent de la base : ${tree}`)
             continue
         }
-        price += getTreeLogDynamicPrice(player, treeData.species, treeData.quality) * treeData.vol1
+        price += getTreeLogDynamicPrice(treeData.species, treeData.quality, treeData.is_dead) * treeData.vol1
         console.info(price)
     }
 

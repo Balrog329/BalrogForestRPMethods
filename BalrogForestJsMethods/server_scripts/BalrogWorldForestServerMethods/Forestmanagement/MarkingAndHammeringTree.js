@@ -1,76 +1,68 @@
 
-function markTree(player, tree_id, tree_database, mark_config) {
-    let marked_database_name = `${tree_database.forest}MarkedDatabase`
-    let mark_data = loadmarkedData(player, tree_database.forest, marked_database_name)
+function markTree(tree_id, tree_database, mark_config) {
 
     // Vérifie s'il est déjà marqué
-    if (mark_data.marked.trees[tree_id]) {
-        messageChat(player, "Cet arbre est déjà marqué.")
+    if (global.marked_trees_database.marked.trees[tree_id]) {
+        messageChat(Utils.server, "Cet arbre est déjà marqué.")
         return
     }
 
-    mark_data.marked.trees[tree_id] = {
+    global.marked_trees_database.marked.trees[tree_id] = {
         mark_name: mark_config.mark_name,
     }
-    saveTreeData(player, marked_database_name, mark_data)
+    messageChat(Utils.server, `Marqué en ${mark_config.mark_name}`);
 
-    messageChat(player, `Marqué en ${mark_config.mark_name}`);
-
-    findPhysicalTreeMark(player, tree_database, mark_config);
+    findPhysicalTreeMark(tree_database, mark_config);
 }
 
-function reserveMarkedTree(player, tree_id, tree_database) {
-    let mark_data = loadmarkedData(player, tree_database.forest, `${tree_database.forest}MarkedDatabase`)
 
-    if (!mark_data.marked.trees[tree_id]) {
-        messageChat(player, "Aucun arbre marqué ou martelé à cet endroit.")
+function reserveMarkedTree(tree_id) {
+
+    if (!global.marked_trees_database.marked.trees[tree_id]) {
+        messageChat(Utils.server, "Aucun arbre marqué ou martelé à cet endroit.")
         return
     }
 
-    delete mark_data.marked.trees[tree_id]
+    delete global.marked_trees_database.marked.trees[tree_id]
 
-    saveTreeData(player, `${tree_database.forest}MarkedDatabase`, mark_data)
-
-    messageChat(player, `Arbre #${tree_id} retiré du marquage.`)
-
+    messageChat(Utils.server, `Arbre #${tree_id} retiré du marquage.`)
+    deleteTreeMark(global.trees_database.trees[tree_id])
 }
 
 
 
-function hammaringTree(player, tree_id, tree_database, pos_data, mark_hammer_config, lot_id) {
-    if (!testIfHammerableTree(player, tree_database.species, tree_database.radius, tree_database.height)) {
-        messageChat(player, "Cet arbre est un bois de chauffage (non martelable).")
+function hammaringTree(tree_id, tree_database, mark_hammer_config, lot_id) {
+    if (!testIfHammerableTree(tree_database.species, tree_database.radius, tree_database.height)) {
+        messageChat(Utils.server, "Cet arbre est un bois de chauffage (non martelable).")
         {return}
     }
-    let database = loadLotData(player, pos_data.normalized_world_name, `${pos_data.normalized_world_name}LotDatabase`)
-    let lot_data = database.lots[lot_id]
+    let lot_data = global.lot_database.lots[lot_id]
 
     if (lot_data.trees[tree_id]) {
-        messageChat(player, "Cet arbre est déjà présent dans le lot.")
+        messageChat(Utils.server, "Cet arbre est déjà présent dans le lot.")
         {return}
     }
 
     if (["for_sale", "sold", "pending", "cutted", "incutting"].includes(lot_data.statut)) {
-        messageChat(player, "Le lot est déjà vendu ou à vendre")
+        messageChat(Utils.server, "Le lot est déjà vendu ou à vendre")
         {return}
     }
 
-    lot_data.trees[tree_id] = pos_data.parcel
+    lot_data.trees[tree_id] = global.resolveParcelNameByPos(tree_database.posx, tree_database.posz)
     lot_data.trees_number = Object.keys(lot_data.trees).length
 
-    calculLotVolume(player, lot_data)
+    calculLotVolume(lot_data)
 
     lot_data.trees_mean_vol1 = (lot_data.volume1 / lot_data.trees_number).toFixed(3)
-    saveTreeData(player, `${pos_data.normalized_world_name}LotDatabase`, database)
 
-    findPhysicalTreeMark(player, tree_database, mark_hammer_config)
+    findPhysicalTreeMark(tree_database, mark_hammer_config)
 
-    // messageChat(player, `Ajouté au lot ${lot_data.id}`)
+    messageChat(Utils.server, `Ajouté au lot ${lot_data.id}`)
 }
 
 
-function testIfHammerableTree(player, species, radius, height) {
-    let species_data = loadConfigData(player, "speciesdata")[species]
+function testIfHammerableTree(species, radius) {
+    let species_data = global.species_config[species]
     if (!species_data) return false
     if (!species_data.hammerable) return false
 
@@ -80,10 +72,9 @@ function testIfHammerableTree(player, species, radius, height) {
 }
 
 
-function reserveHammeringTree(player, tree_data, pos_data, current_wood_lot) {
+function reserveHammeringTree(tree_data, lot_id) {
 
-    let database = loadLotData(player, pos_data.normalized_world_name, `${pos_data.normalized_world_name}LotDatabase`)
-    let lot_data = database.lots[current_wood_lot]
+    let lot_data = global.lot_database.lots[lot_id]
     let tree_id = `${getTreePositionStr(tree_data)}_${tree_data.volume_total}`
 
     if (!lot_data.trees[tree_id]) {
@@ -94,17 +85,15 @@ function reserveHammeringTree(player, tree_data, pos_data, current_wood_lot) {
     delete lot_data.trees[tree_id]
     lot_data.trees_number = Object.keys(lot_data.trees).length
 
-    calculLotVolume(player, lot_data)
+    calculLotVolume(lot_data)
     
     lot_data.trees_mean_vol1 = (lot_data.volume1 / lot_data.trees_number).toFixed(3)
 
-    saveTreeData(player, `${pos_data.normalized_world_name}LotDatabase`, database)
-
-    messageChat(player, `Arbre #${tree_id} retiré du lot.`)
+    messageChat(Utils.server, `Arbre #${tree_id} retiré du lot.`)
 }
 
 
-function findPhysicalTreeMark(player, tree_database, mark_config) {
+function findPhysicalTreeMark(tree_database, mark_config) {
     for (let key in mark_config.marks) {
         let mark = mark_config.marks[key];
 
@@ -112,10 +101,22 @@ function findPhysicalTreeMark(player, tree_database, mark_config) {
         let dy = mark.offset[1] + 2
         let dz = mark.offset[2] 
 
-        addTreeMark(player, `${tree_database.posx + dx} ${tree_database.posy + dy} ${tree_database.posz + dz}`, mark.block);
+        addTreeMark(`${tree_database.posx + dx} ${tree_database.posy + dy} ${tree_database.posz + dz}`, mark.block);
     }
 }
 
-function addTreeMark(player, pos, blockId) {
-    player.runCommandSilent(`setblock ${pos} ${blockId} replace`);
+function addTreeMark(pos, blockId) {
+    Utils.server.runCommandSilent(`setblock ${pos} ${blockId} replace`);
+}
+
+function deleteTreeMark(tree_data) {
+
+    const x = tree_data.posx;
+    const y = tree_data.posy + 2;
+    const z = tree_data.posz;
+
+    addTreeMark(`${x - 1} ${y} ${z}`, "minecraft:air");
+    addTreeMark(`${x + 1} ${y} ${z}`, "minecraft:air");
+    addTreeMark(`${x} ${y} ${z - 1}`, "minecraft:air");
+    addTreeMark(`${x} ${y} ${z + 1}`, "minecraft:air");
 }

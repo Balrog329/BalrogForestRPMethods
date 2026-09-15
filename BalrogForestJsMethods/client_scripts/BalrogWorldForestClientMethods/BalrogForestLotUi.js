@@ -4,7 +4,7 @@ ClientEvents.tick(event => {
     // Vérifications générales
     if (!global.current_wood_lot || global.current_wood_lot == "None") {return}
 
-    if (itemId === "immersiveengineering:hammer") {
+    if (itemId === "kubejs:forest_hammer") {
 
         let ui = uiLotText(player, global.current_wood_lot)
     } else {

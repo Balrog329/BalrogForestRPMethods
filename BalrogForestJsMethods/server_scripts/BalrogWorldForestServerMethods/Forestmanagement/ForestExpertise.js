@@ -54,7 +54,7 @@ function groupTreesBySpecies(player, trees) {
         bySpecies[sp].count++
         bySpecies[sp].total_volume += tree.vol1 || 0
         bySpecies[sp].radius.push(tree.radius || 0)
-        bySpecies[sp].total_price += getTreeLogDynamicPrice(player, sp, tree.quality || 1)
+        bySpecies[sp].total_price += getTreeLogDynamicPrice(player, sp, tree.is_dead)
     }
 
     return bySpecies

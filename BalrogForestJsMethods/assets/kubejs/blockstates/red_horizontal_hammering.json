@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "kubejs:block/red_horizontal_hammering"
+    },
+    "facing=east": {
+      "model": "kubejs:block/red_horizontal_hammering",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "kubejs:block/red_horizontal_hammering",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/red_horizontal_hammering",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "kubejs:block/red_horizontal_hammering",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "kubejs:block/red_horizontal_hammering",
+      "x": 90
+    }
+  }
+}

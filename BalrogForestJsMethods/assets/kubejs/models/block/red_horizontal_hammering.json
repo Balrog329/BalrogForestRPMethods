@@ -1,0 +1,9 @@
+{
+  "parent": "s_a_b:custom/flat",
+  "textures": {
+    "all": "kubejs:block/red_horizontal_hammering",
+    "particle": "kubejs:block/red_horizontal_hammering",
+    "25": "kubejs:block/red_horizontal_hammering"
+  },
+  "render_type": "minecraft:cutout"
+}

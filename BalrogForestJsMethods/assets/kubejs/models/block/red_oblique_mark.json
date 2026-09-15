@@ -1,0 +1,9 @@
+{
+  "parent": "s_a_b:custom/flat",
+  "textures": {
+    "all": "kubejs:block/red_oblique_mark",
+    "particle": "kubejs:block/red_oblique_mark",
+    "25": "kubejs:block/red_oblique_mark"
+  },
+  "render_type": "minecraft:cutout"
+}

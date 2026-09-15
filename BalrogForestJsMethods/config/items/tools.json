@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "forest_hammer",
+      "displayName": "Marteau forestier",
+      "type": "sword",
+      "texture": "kubejs:item/forest_hammer",
+      "maxStackSize": 1
+    },
+    {
+      "id": "forest_caliper",
+      "displayName": "Compas forestier",
+      "type": "hoe",
+      "texture": "kubejs:item/forest_caliper",
+      "maxStackSize": 1
+    },
+    {
+      "id": "red_painter",
+      "displayName": "Peinture forestière rouge",
+      "type": "sword",
+      "texture": "kubejs:item/red_painter",
+      "maxStackSize": 1
+    },
+    {
+      "id": "blue_painter",
+      "displayName": "Peinture forestière bleue",
+      "type": "sword",
+      "texture": "kubejs:item/blue_painter",
+      "maxStackSize": 1
+    }
+  ]
+}

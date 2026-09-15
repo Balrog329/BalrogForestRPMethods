@@ -1,80 +1,91 @@
 
-function getConfigjsonFile(player, json_name) {
-    return `kubejs/config/${json_name}.json`
+function getConfigjsonFile(json_name) {
+    return 'kubejs/config/balrogforestconfig/'+ json_name + '.json'
 }
 
-function loadConfigData(player, json_name) {
-    const file = getConfigjsonFile(player, json_name)
-
-    return JsonIO.read(file)
+function loadConfigData(json_name) {
+    return JsonIO.read(getConfigjsonFile(json_name))
 }
 
+function loadGlobalData(json_name) {
+    return JsonIO.read('kubejs/data/entities/' + json_name + '.json')
+}
 
-function getTreeFile(player, json_name) {
+function saveGlobalData(json_name, data) {
+    return JsonIO.write('kubejs/data/entities/' + json_name + '.json', data)
+}
+
+function getDataFile(json_name) {
     return `kubejs/data/${json_name}.json`
 }
 
-function loadTreeData(player, json_name) {
-    const file = getTreeFile(player, json_name)
+
+function loadTreeData(json_name) {
+    const file = getDataFile(json_name)
 
     return JsonIO.read(file) || {
-        forest: getMcWorld(player),
+        server: global.getServerContext().serverName,
         trees: {}
     }
 }
 
-function loadLotData(player, forest_name, json_name) {
-    const file = getTreeFile(player, json_name);
-    return JsonIO.read(file) || { 
-        forest_name: forest_name,
+function loadLotData(json_name) {
+    const file = getDataFile(json_name);
+    return JsonIO.read(file) || {
+        server: global.getServerContext().serverName,
         lots: {}
     }
 }
 
-function saveTreeData(player, json_name, data) {
+function saveTreeData(json_name, data) {
     console.info(`[SAVE] ${json_name}`)
-    const file = getTreeFile(player, json_name)
+    const file = getDataFile(json_name)
     JsonIO.write(file, data)
 }
 
 
 
-function loadmarkedData(player, forest_name, json_name) {
+function loadmarkedData(json_name) {
 
-    const file = getTreeFile(player, json_name)
+    const file = getDataFile(json_name)
 
     return JsonIO.read(file) || {
-        forest: forest_name,
+        server: global.getServerContext().normalized_serverName,
         marked: {
-        trees: {}
+            trees: {}
         }
     }
 }
 
-function loadFrontierData(player, frontier_name){
-    const file = getFrontierFile(player, frontier_name)
-    return JsonIO.read(file)
+function loadFrontierData(frontier_name){
+    return JsonIO.read(getFrontierFile(frontier_name)) || {}
 }
 
-function getFrontierFile(player, json_name) {
+function getFrontierFile(json_name) {
     return `kubejs/data/frontiers/${json_name}.geojson`
 }
 
-function loadManagementBook(player, forest_name) {
+function loadManagementBook() {
 
-    const file = `kubejs/data/${forest_name}_management_book.json`
+    const file = 'kubejs/data/' + global.getServerContext().normalized_serverName + '_management_book.json'
 
     return JsonIO.read(file) || {
-        forest: forest_name,
+        forest: global.getServerContext().normalized_serverName,
         book: {}
     }
 }
 
-function saveManagementBook(player, forest_name, data) {
-    const file = `kubejs/data/${forest_name}_management_book.json`
+function saveManagementBook(data) {
+    const file = 'kubejs/data/' + global.getServerContext().normalized_serverName + '_management_book.json'
     console.info(`[SAVE] ${file}`)
     JsonIO.write(file, data)
 
 }
+
+function saveConfigFile(json_name, data) {
+    return JsonIO.write('kubejs/config/balrogforestconfig/'+ json_name + '.json', data)
+}
+
+
 
 

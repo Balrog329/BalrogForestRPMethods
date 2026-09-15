@@ -1,0 +1,9 @@
+{
+  "saplings": [
+    {
+      "id": "douglas",
+      "displayName": "Pousse de Douglas",
+      "model": "kubejs:block/douglas_sapling"
+    }
+  ]
+}

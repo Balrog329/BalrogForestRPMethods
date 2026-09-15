@@ -1,16 +1,68 @@
 {
-	"forest": "foret_de_palissonais",
+	"server": "Forêt de Palissonais",
 	"trees": {},
 	"quotes": {
-		"1_2014_broyage_plein_ou_bande_P102": {
+		"1_2015_degagement_ligne_P102": {
 			"forest_name": "foret_de_palissonais",
-			"id": "1_2014_broyage_plein_ou_bande_P102",
+			"id": "1_2015_degagement_ligne_P102",
+			"forest_id": 1,
+			"work_type": "degagement_ligne",
+			"parcel": 102,
+			"surface": 2.8197,
+			"price": 3383.6400000000003,
+			"year": 2015,
+			"owner": "BERNIS_ASSURANCES",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		},
+		"1_2015_broyage_plein_ou_bande_P6": {
+			"forest_name": "foret_de_palissonais",
+			"id": "1_2015_broyage_plein_ou_bande_P6",
 			"forest_id": 1,
 			"work_type": "broyage_plein_ou_bande",
+			"parcel": 6,
+			"surface": 3.7222,
+			"price": 10049.939999999999,
+			"year": 2015,
+			"owner": "BERNIS_ASSURANCES",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		},
+		"foret_de_palissonais_2016_broyage_plein_ou_bande_P25": {
+			"forest_name": "foret_de_palissonais",
+			"id": "foret_de_palissonais_2016_broyage_plein_ou_bande_P25",
+			"forest_id": "foret_de_palissonais",
+			"work_type": "broyage_plein_ou_bande",
+			"parcel": 25,
+			"surface": 0.1949,
+			"price": 526.23,
+			"year": 2016,
+			"owner": "BERNIS_ASSURANCES",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		},
+		"foret_de_palissonais_2016_broyage_plein_ou_bande_P24": {
+			"forest_name": "foret_de_palissonais",
+			"id": "foret_de_palissonais_2016_broyage_plein_ou_bande_P24",
+			"forest_id": "foret_de_palissonais",
+			"work_type": "broyage_plein_ou_bande",
+			"parcel": 24,
+			"surface": 3.6248,
+			"price": 9786.960000000001,
+			"year": 2016,
+			"owner": "BERNIS_ASSURANCES",
+			"referent_manager": "balrog329",
+			"status": "accepted"
+		},
+		"foret_de_palissonais_2016_entretien_interlignes_plein_P102": {
+			"forest_name": "foret_de_palissonais",
+			"id": "foret_de_palissonais_2016_entretien_interlignes_plein_P102",
+			"forest_id": "foret_de_palissonais",
+			"work_type": "entretien_interlignes_plein",
 			"parcel": 102,
 			"surface": 2.5045,
-			"price": 6762.150000000001,
-			"year": 2014,
+			"price": 3568.9125000000004,
+			"year": 2016,
 			"owner": "BERNIS_ASSURANCES",
 			"referent_manager": "balrog329",
 			"status": "accepted"

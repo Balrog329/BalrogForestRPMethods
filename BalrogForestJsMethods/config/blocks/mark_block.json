@@ -1,0 +1,52 @@
+{
+  "blocks": [
+    {
+      "id": "red_horizontal_mark",
+      "displayName": "red horizontal mark",
+      "property": "facing",
+      "model": "kubejs:block/red_horizontal_mark"
+    },
+    {
+      "id": "blue_horizontal_mark",
+      "displayName": "blue horizontal mark",
+      "property": "facing",
+      "model": "kubejs:block/blue_horizontal_mark"
+    },
+    {
+      "id": "red_foot_mark",
+      "displayName": "Marque au pied",
+      "property": "facing",
+      "model": "kubejs:block/red_foot_mark"
+    },
+    {
+      "id": "red_horizontal_hammering",
+      "displayName": "Marque au corps",
+      "property": "facing",
+      "model": "kubejs:block/red_horizontal_hammering"
+    },
+    {
+      "id": "red_oblique_mark",
+      "displayName": "Marque en abandon",
+      "property": "facing",
+      "model": "kubejs:block/red_oblique_mark"
+    },
+    {
+      "id": "blue_point_mark",
+      "displayName": "Marque d'inventaire",
+      "property": "facing",
+      "model": "kubejs:block/blue_point_mark"
+    },
+    {
+      "id": "blue_right_arrow",
+      "displayName": "Chevron de cloisonnement droit",
+      "property": "facing",
+      "model": "kubejs:block/blue_right_arrow"
+    },
+    {
+      "id": "blue_left_arrow",
+      "displayName": "Chevron de cloisonnement gauche",
+      "property": "facing",
+      "model": "kubejs:block/blue_left_arrow"
+    }
+  ]
+}

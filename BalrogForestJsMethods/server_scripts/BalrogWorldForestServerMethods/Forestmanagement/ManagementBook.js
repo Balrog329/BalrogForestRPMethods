@@ -1,14 +1,15 @@
 
-function addInManagementBook(player, id, type, year, parcel, desc) {
+function addInManagementBook(id, type, property, parcel, desc) {
 
     if (!global.forest_book.book[id]) {
         global.forest_book.book[id] = {}
     } else {
-        messageChat(player, `Cette note existe déjà`)
+        messageChat(Utils.server, `Cette note existe déjà`)
         return
     }
     global.forest_book.book[id] = {
-        year: year,
+        year: global.server_date.year,
+        proprietie : property,
         type: type,
         parcel:parcel,
         desc: desc
@@ -48,3 +49,5 @@ function searchByParcelInManagementBook(year) {
     }
     return results
 }
+
+

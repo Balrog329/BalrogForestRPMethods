@@ -1,0 +1,9 @@
+{
+  "parent": "s_a_b:custom/flat",
+  "textures": {
+    "all": "kubejs:block/red_horizontal_mark",
+    "particle": "kubejs:block/red_horizontal_mark",
+    "25": "kubejs:block/red_horizontal_mark"
+  },
+  "render_type": "minecraft:cutout"
+}

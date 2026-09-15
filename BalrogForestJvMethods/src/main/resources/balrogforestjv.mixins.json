@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.balrogforestjv.balrogforestjv.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "RootyBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

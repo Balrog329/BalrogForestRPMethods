@@ -4,7 +4,7 @@ from pathlib import Path
 KUBEJS_DIR = Path(__file__).parents[3]
 
 def getConfigjsonFile(json_name):
-    return Path(KUBEJS_DIR) / "config" / f"{json_name}.json"
+    return Path(KUBEJS_DIR) / "config" / "balrogforestconfig" / f"{json_name}.json"
 
 
 def loadConfigData(json_name):
@@ -15,3 +15,6 @@ def loadConfigData(json_name):
 def readjsonFile(file):
     with open(file, "r") as json_data:
         return json.load(json_data)
+
+def getdataJsonFile(json_name):
+    return Path(KUBEJS_DIR) / "data" / f"{json_name}.json"

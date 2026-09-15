@@ -1,5 +1,7 @@
 global.forestInfo = function(player){
-    let pos_data = global.treePosMetadata(player, player.blockPosition())
+    let pos_data = global.forest_management[global.resolveForestNameByPos(player.x, player.z)]
+    let parcel = global.resolveParcelNameByPos(player.x, player.z)
+    let sub_parcel = global.resolveSubParcelByPos(player.x, player.z)
 
     if (!pos_data) {
         messageChat(player, "§c❌ Aucune donnée forestière trouvée ici.")
@@ -10,8 +12,8 @@ global.forestInfo = function(player){
     messageChat(player,`§a🌲  §l${pos_data.name_id}`)
     messageChat(player,"§2━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 
-    messageChat(player, `§e📍 Parcelle : §6${pos_data.parcel}${pos_data.sub_parcel ? "." + pos_data.sub_parcel : ""}`)
-    messageChat(player, `§e📐 Surface parcelle : §6${pos_data.parcel_surf}`)
+    messageChat(player, `§e📍 Parcelle : §6${parcel}${sub_parcel ? "." + sub_parcel : ""}`)
+    messageChat(player, `§e📐 Surface parcelle : §6${global.resolveParcelSurfaceByPos(player.x, player.z)}`)
     messageChat(player, `§e🌳 Surface forêt : §6${pos_data.Surface}`)
 
     messageChat(player,"§2━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
