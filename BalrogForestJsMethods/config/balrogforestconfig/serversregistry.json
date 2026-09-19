@@ -3,7 +3,7 @@
 		"foret_de_palissonais": {
 			"serverName": "Forêt de Palissonais",
 			"normalized_serverName": "foret_de_palissonais",
-			"world_dir": "PALISSONAIS",
+			"serverDir": "PALISSONAIS",
 			"offline_time_coef": 0.1425555,
 			"isclaim": false,
 			"proprietiesInServer": {
@@ -33,7 +33,7 @@
 			"offline_time_coef": 0.14255555,
 			"isclaim": false,
 			"serversPath": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves",
-			"serverDir": "E:\\dossier_jeux\\minecraft\\Balrog_worlds\\balrog_worlds/saves/Vidaillat",
+			"serverDir": "Vidaillat",
 			"proprietiesInServer": {}
 		},
 		"bois_de_la_forgeotte": {
